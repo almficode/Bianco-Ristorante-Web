@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bianco Ristorante — Menu · Carta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Jost',sans-serif;color:#2c281f;background:#f4f0e8;padding:60px 24px;line-height:1.5;}
+  .sheet{max-width:760px;margin:0 auto;background:#fff;padding:64px 60px;box-shadow:0 20px 60px rgba(80,70,50,.12);}
+  .top{text-align:center;border-bottom:1px solid #e7dec9;padding-bottom:30px;margin-bottom:38px;}
+  .brand{font-family:'Cormorant Garamond',serif;font-size:46px;letter-spacing:8px;font-weight:500;}
+  .sub{font-family:'Cormorant Garamond',serif;font-style:italic;color:#b8975a;font-size:20px;margin-top:4px;}
+  .meta{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#9a917f;margin-top:14px;}
+  .cat{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:4px;text-transform:uppercase;color:#b8975a;margin:34px 0 16px;}
+  .row{display:flex;justify-content:space-between;gap:18px;align-items:baseline;padding:9px 0;border-bottom:1px dotted #ece4d3;}
+  .name{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:500;}
+  .desc{font-size:12.5px;color:#8a8378;font-weight:300;margin-top:2px;max-width:520px;}
+  .price{font-family:'Cormorant Garamond',serif;font-size:19px;color:#b8975a;white-space:nowrap;}
+  .foot{text-align:center;margin-top:44px;padding-top:26px;border-top:1px solid #e7dec9;font-size:11px;letter-spacing:1.5px;color:#9a917f;line-height:1.9;}
+  @media print{body{background:#fff;padding:0;}.sheet{box-shadow:none;max-width:none;padding:34px 40px;}}
+</style>
+</head>
+<body>
+  <div class="sheet">
+    <div class="top">
+      <div class="brand">BIANCO</div>
+      <div class="sub">Ristorante &amp; Lounge</div>
+      <div class="meta">Puerto del Carmen · Lanzarote</div>
+    </div>
+
+    <div class="cat">Antipasti — Starters</div>
+    <div class="row"><div><div class="name">Bruschetta al Pomodoro</div><div class="desc">Toasted sourdough, San Marzano tomato, basil and Sicilian olive oil.</div></div><div class="price">8 €</div></div>
+    <div class="row"><div><div class="name">Calamari Fritti</div><div class="desc">Lightly battered squid rings, sprouts and herb aioli.</div></div><div class="price">12 €</div></div>
+    <div class="row"><div><div class="name">Burrata &amp; Prosciutto</div><div class="desc">Creamy burrata, San Daniele ham, rocket and aged balsamic.</div></div><div class="price">13 €</div></div>
+
+    <div class="cat">Pasta &amp; Risotto</div>
+    <div class="row"><div><div class="name">Risotto al Tartufo</div><div class="desc">Carnaroli rice, black truffle, aged parmesan and rocket.</div></div><div class="price">18 €</div></div>
+    <div class="row"><div><div class="name">Penne all'Arrabbiata</div><div class="desc">Fresh pasta, San Marzano tomato, chilli and crisp parmesan.</div></div><div class="price">13 €</div></div>
+    <div class="row"><div><div class="name">Spaghetti alle Vongole</div><div class="desc">Clams, garlic, white wine, parsley and chilli.</div></div><div class="price">16 €</div></div>
+
+    <div class="cat">Pizze</div>
+    <div class="row"><div><div class="name">Pizza Diavola</div><div class="desc">Sourdough base, fior di latte mozzarella, spicy salami and fresh rocket.</div></div><div class="price">14 €</div></div>
+    <div class="row"><div><div class="name">Margherita</div><div class="desc">San Marzano tomato, fior di latte, fresh basil.</div></div><div class="price">11 €</div></div>
+    <div class="row"><div><div class="name">Quattro Formaggi</div><div class="desc">Mozzarella, gorgonzola, parmesan and smoked provola.</div></div><div class="price">13 €</div></div>
+
+    <div class="cat">Secondi — Mains</div>
+    <div class="row"><div><div class="name">Salmone alla Griglia</div><div class="desc">Grilled salmon fillet, Canarian potatoes, seasonal vegetables and salsa verde.</div></div><div class="price">21 €</div></div>
+    <div class="row"><div><div class="name">Tagliata di Manzo</div><div class="desc">Matured beef sirloin, artisan fries and garden salad.</div></div><div class="price">24 €</div></div>
+
+    <div class="cat">Dolci — Desserts</div>
+    <div class="row"><div><div class="name">Panna Cotta</div><div class="desc">Vanilla cream, red berry coulis.</div></div><div class="price">6 €</div></div>
+    <div class="row"><div><div class="name">Tiramisù della Casa</div><div class="desc">Mascarpone, espresso, savoiardi and cocoa.</div></div><div class="price">7 €</div></div>
+
+    <div class="cat">Cocktails &amp; Bar</div>
+    <div class="row"><div><div class="name">Frozen Strawberry</div><div class="desc">Our signature — fresh strawberry, citrus and mint.</div></div><div class="price">9 €</div></div>
+    <div class="row"><div><div class="name">Aperol Spritz</div><div class="desc">Aperol, prosecco, soda and orange.</div></div><div class="price">8 €</div></div>
+    <div class="row"><div><div class="name">Negroni</div><div class="desc">Gin, Campari, sweet vermouth.</div></div><div class="price">9 €</div></div>
+
+    <div class="foot">
+      Vegan, vegetarian &amp; gluten-free options available on request · Please inform us of any allergies<br>
+      Avenida de las Playas 33 · CC Arena Dorada · Puerto del Carmen, Tías · Lanzarote<br>
+      Open every day · 09:00 – 00:00 · @bianco_lounge_lanzarote
+    </div>
+  </div>
+</body>
+</html>

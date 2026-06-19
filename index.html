@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bianco Ristorante — Beachfront Italian Restaurant &amp; Cocktail Lounge | Puerto del Carmen, Lanzarote</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Bianco Ristorante","servesCuisine":["Italian","Mediterranean"],"priceRange":"€€","address":{"@type":"PostalAddress","streetAddress":"Avenida de las Playas 33, CC Arena Dorada","addressLocality":"Puerto del Carmen","addressRegion":"Lanzarote","addressCountry":"ES"},"openingHours":"Mo-Su 10:00-00:00","acceptsReservations":true}
+</script>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#f4f0e8;color:#2b2118;font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;overflow-x:hidden}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:#f4f0e8}
+::-webkit-scrollbar-thumb{background:#b8975a;border-radius:3px}
+[data-i18n],[data-i18n-html]{transition:opacity .35s ease}
+[data-nav=""].scrolled{background:rgba(244,240,232,.97)!important;padding-top:14px!important;padding-bottom:14px!important;box-shadow:0 1px 20px rgba(80,70,50,.12)}
+[data-nav=""].scrolled [data-nav-logo=""],[data-nav=""].scrolled [data-nav-links=""],[data-nav=""].scrolled [data-nav-social=""]{color:#2b2118!important}
+.bianco-chip{display:inline-block;padding:7px 16px;border:1px solid rgba(184,151,90,.35);border-radius:20px;font-size:13px;color:#5c564a;cursor:pointer;transition:background .25s,border-color .25s;font-family:inherit;background:#fff}
+.bianco-chip:hover{background:#f9f4ea;border-color:#b8975a}
+@keyframes kenburns{0%{transform:scale(1) translate(0,0)}100%{transform:scale(1.08) translate(-1%,-1%)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+@keyframes marqueeL{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes marqueeR{0%{transform:translateX(-50%)}100%{transform:translateX(0)}}
+@keyframes drift1{0%,100%{transform:translateY(0) translateX(0)}33%{transform:translateY(-8px) translateX(4px)}66%{transform:translateY(4px) translateX(-5px)}}
+@keyframes drift2{0%,100%{transform:translateY(0) translateX(0)}33%{transform:translateY(6px) translateX(-6px)}66%{transform:translateY(-7px) translateX(5px)}}
+@keyframes slideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes typing{0%,80%,100%{opacity:0;transform:scale(.6)}40%{opacity:1;transform:scale(1)}}
+@keyframes pulsechat{0%,100%{box-shadow:0 0 0 0 rgba(184,151,90,.45)}50%{box-shadow:0 0 0 10px rgba(184,151,90,0)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes spinrev{to{transform:rotate(-360deg)}}
+</style>
+</head>
+<body>
+<div data-bianco-root="" style="font-family:'Jost',sans-serif; color:#2c281f; background:#f4f0e8; position:relative;">
+
+  
+
+  <!-- scroll progress -->
+  <div style="position:fixed; top:0; left:0; height:2px; width:100%; z-index:200; background:transparent;">
+    <div data-progress="" style="height:100%; width:0%; background:linear-gradient(90deg,#d8c08a,#b8975a); box-shadow:0 0 12px rgba(184,151,90,.6);"></div>
+  </div>
+
+  <!-- NAV -->
+  <nav data-nav="" style="position:fixed; top:0; left:0; right:0; z-index:150; display:flex; align-items:center; justify-content:space-between; padding:22px 48px; transition:background .5s ease, padding .5s ease, box-shadow .5s ease; background:transparent;">
+    <a href="#top" data-nav-logo="" style="font-family:'Cormorant Garamond',serif; font-size:30px; font-weight:500; letter-spacing:5px; color:#fff; transition:color .5s ease; text-decoration:none;">BIANCO</a>
+    <div style="display:flex; align-items:center; gap:36px;">
+      <div data-nav-links="" style="display:flex; gap:28px; font-size:13px; letter-spacing:1.5px; text-transform:uppercase; color:#fff; transition:color .5s ease;">
+        <a href="#top" data-i18n="nav_home" style="cursor:pointer; color:inherit; text-decoration:none;">Home</a>
+        <a href="#about" data-i18n="nav_about" style="cursor:pointer; color:inherit; text-decoration:none;">About</a>
+        <a href="#menu" data-i18n="nav_menu" style="cursor:pointer; color:inherit; text-decoration:none;">Menu</a>
+        <a href="#experience" data-i18n="nav_cocktails" style="cursor:pointer; color:inherit; text-decoration:none;">Experience</a>
+        <a href="#reserve" data-i18n="nav_reserve" style="cursor:pointer; color:inherit; text-decoration:none;">Reserve</a>
+        <a id="nav-ai-btn" href="#" style="cursor:pointer; color:inherit; text-decoration:none; display:flex; align-items:center; gap:6px;" onclick="event.preventDefault(); window.openAIPanel();">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Asistente
+        </a>
+      </div>
+      <div data-nav-lang="" style="display:flex; gap:12px; font-size:12px; letter-spacing:1px; color:#fff; transition:color .5s ease;">
+        <span data-lang-btn="en" style="font-weight:500; border-bottom:1px solid #c2a15c; padding-bottom:2px; cursor:pointer;">EN</span>
+        <span data-lang-btn="es" style="opacity:.55; cursor:pointer; padding-bottom:2px;">ES</span>
+        <span data-lang-btn="fr" style="opacity:.55; cursor:pointer; padding-bottom:2px;">FR</span>
+        <span data-lang-btn="de" style="opacity:.55; cursor:pointer; padding-bottom:2px;">DE</span>
+      </div>
+      <div data-social-wrap="" style="position:relative;">
+        <span data-social-toggle="" data-nav-social="" style="display:inline-flex; align-items:center; gap:7px; font-size:12px; letter-spacing:1.5px; text-transform:uppercase; color:#fff; cursor:pointer; transition:color .5s ease;">
+          <span data-i18n="nav_follow">Follow</span>
+          <span data-social-caret="" style="font-size:9px; transition:transform .35s ease;">▾</span>
+        </span>
+        <div data-social-menu="" style="position:absolute; top:32px; right:0; min-width:196px; background:#fff; border-radius:12px; box-shadow:0 20px 48px rgba(80,70,50,.2); padding:8px; opacity:0; transform:translateY(-8px); pointer-events:none; transition:opacity .3s ease, transform .3s ease; z-index:60;">
+          <a data-ig="" href="#" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:11px 14px; border-radius:8px; text-decoration:none; color:#2c281f; transition:background .25s;" onmouseover="this._h_background=this.style.getPropertyValue('background'); this.style.setProperty('background','#f6f1e6')" onmouseout="this.style.setProperty('background',this._h_background)">
+            <span style="position:relative; width:18px; height:18px; border:2px solid #b8975a; border-radius:5px; flex:none;"><span style="position:absolute; top:3px; left:3px; right:3px; bottom:3px; border:2px solid #b8975a; border-radius:50%;"></span><span style="position:absolute; top:1px; right:1px; width:2.5px; height:2.5px; background:#b8975a; border-radius:50%;"></span></span>
+            <span style="font-size:13px; letter-spacing:.5px;">Instagram</span>
+          </a>
+          <a data-fb="" href="#" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:13px; padding:11px 14px; border-radius:8px; text-decoration:none; color:#2c281f; transition:background .25s;" onmouseover="this._h_background=this.style.getPropertyValue('background'); this.style.setProperty('background','#f6f1e6')" onmouseout="this.style.setProperty('background',this._h_background)">
+            <span style="width:18px; height:18px; border-radius:4px; background:#b8975a; color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-weight:600; font-size:14px; flex:none;">f</span>
+            <span style="font-size:13px; letter-spacing:.5px;">Facebook</span>
+          </a>
+          <div data-i18n="nav_follow_sub" style="padding:8px 14px 4px; font-size:10.5px; letter-spacing:.5px; color:#a89b7f;">@bianco_lounge_lanzarote</div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="top" data-screen-label="Hero" data-hero="" style="position:relative; height:100vh; min-height:700px; overflow:hidden; display:flex; align-items:center; justify-content:center; background:#e9e3d7; cursor:default;">
+    <div data-hero-bg="" style="position:absolute; inset:0; will-change:transform;">
+      <div data-hero-img="" style="position:absolute; inset:-7%; background-image:url('assets/interior-lounge.jpg'); background-size:cover; background-position:center 42%; animation:kenburns 30s ease-in-out infinite alternate;"></div>
+    </div>
+    <div data-hero-wash="" style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(247,243,236,.34) 0%, rgba(247,243,236,.12) 28%, rgba(244,240,232,.55) 68%, rgba(244,240,232,.94) 88%, #f4f0e8 100%);"></div>
+
+    <div data-spotlight="" style="position:absolute; inset:0; background:radial-gradient(520px circle at 50% 42%, rgba(255,252,244,.5), transparent 64%); transition:background .3s ease; pointer-events:none;"></div>
+
+    <div data-depth="22" style="position:absolute; top:42%; left:50%; width:0; height:0; transition:transform .5s cubic-bezier(.16,1,.3,1); will-change:transform;">
+      <div style="position:absolute; top:50%; left:50%; width:640px; height:640px; margin:-320px 0 0 -320px; border:1px solid rgba(184,151,90,.3); border-radius:50%; animation:spin 70s linear infinite;"></div>
+      <div style="position:absolute; top:50%; left:50%; width:820px; height:820px; margin:-410px 0 0 -410px; border:1px solid rgba(184,151,90,.16); border-radius:50%; animation:spinrev 100s linear infinite;"></div>
+    </div>
+    <div data-depth="42" style="position:absolute; top:20%; left:13%; transition:transform .5s cubic-bezier(.16,1,.3,1); will-change:transform;">
+      <div style="width:130px; height:130px; border-radius:50%; background:radial-gradient(circle at 35% 35%, rgba(216,192,138,.45), rgba(184,151,90,0)); animation:drift1 15s ease-in-out infinite; filter:blur(3px);"></div>
+    </div>
+    <div data-depth="56" style="position:absolute; top:30%; right:16%; transition:transform .5s cubic-bezier(.16,1,.3,1); will-change:transform;">
+      <div style="width:160px; height:160px; border-radius:50%; background:radial-gradient(circle at 35% 35%, rgba(255,255,255,.6), rgba(255,255,255,0)); animation:drift2 19s ease-in-out infinite; filter:blur(4px);"></div>
+    </div>
+
+    <div data-hero-content="" style="position:relative; z-index:6; will-change:transform; width:100%; display:flex; justify-content:center;">
+      <div data-hero-inner="" data-depth="-18" style="text-align:center; color:#2b2118; transition:transform .5s cubic-bezier(.16,1,.3,1); will-change:transform; padding:0 32px;">
+        <div data-enter="" data-i18n="hero_loc" style="font-size:13px; letter-spacing:6px; text-transform:uppercase; margin-bottom:24px; color:#a07b3a;">Beachfront · Puerto del Carmen, Lanzarote</div>
+        <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(76px,14vw,200px); line-height:.86; letter-spacing:6px; color:#2b2118; display:flex; justify-content:center; text-shadow:0 2px 30px rgba(255,255,255,.5);">
+          <span data-enter="" style="display:inline-block;">B</span>
+          <span data-enter="" style="display:inline-block;">I</span>
+          <span data-enter="" style="display:inline-block;">A</span>
+          <span data-enter="" style="display:inline-block;">N</span>
+          <span data-enter="" style="display:inline-block;">C</span>
+          <span data-enter="" style="display:inline-block;">O</span>
+        </h1>
+        <div data-enter="" data-i18n="hero_sub" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:400; font-size:clamp(22px,3vw,38px); margin-top:10px; color:#7a6a4e;">Ristorante &amp; Lounge</div>
+        <div data-enter="" style="width:74px; height:1px; background:linear-gradient(90deg,transparent,#b8975a,transparent); margin:30px auto 0;"></div>
+      </div>
+    </div>
+
+    <div data-hero-cue="" style="position:absolute; bottom:120px; left:50%; transform:translateX(-50%); z-index:6; display:flex; flex-direction:column; align-items:center; gap:9px; color:#8a7858;">
+      <span data-i18n="hero_scroll" style="font-size:11px; letter-spacing:3px; text-transform:uppercase;">Discover</span>
+      <div style="width:1px; height:42px; background:linear-gradient(#b8975a,transparent); animation:bob 2.2s ease-in-out infinite;"></div>
+    </div>
+  </section>
+
+  <!-- CONVEYOR -->
+  <div style="position:relative; margin-top:-92px; z-index:20; background:transparent; overflow:hidden;">
+    <div style="position:absolute; top:0; left:0; bottom:0; width:110px; z-index:4; pointer-events:none; background:linear-gradient(90deg,#f4f0e8,rgba(244,240,232,0));"></div>
+    <div style="position:absolute; top:0; right:0; bottom:0; width:110px; z-index:4; pointer-events:none; background:linear-gradient(270deg,#f4f0e8,rgba(244,240,232,0));"></div>
+    <div data-conveyor="" style="display:flex; gap:30px; width:max-content; padding:18px 15px; animation:marqueeL 46s linear infinite; will-change:transform;" onmouseover="this._h_animation_play_state=this.style.getPropertyValue('animation-play-state'); this.style.setProperty('animation-play-state','paused')" onmouseout="this.style.setProperty('animation-play-state',this._h_animation_play_state)">
+      <div style="flex:none; display:flex; flex-direction:column; align-items:center; gap:12px; width:180px;">
+          <div style="width:172px; height:172px; border-radius:50%; overflow:hidden; box-shadow:0 18px 38px rgba(80,70,50,.18); position:relative; background:#fff;">
+            <div style="position:absolute; inset:0; background-image:url('assets/dish-pizza.jpg'); background-size:cover; background-position:center;"></div>
+            <div style="position:absolute; inset:0; border-radius:50%; border:2px solid rgba(184,151,90,.5);"></div>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#3a352b; text-align:center;">Pizza Diavola</div>
+        </div>
+        <div style="flex:none; display:flex; flex-direction:column; align-items:center; gap:12px; width:180px;">
+          <div style="width:172px; height:172px; border-radius:50%; overflow:hidden; box-shadow:0 18px 38px rgba(80,70,50,.18); position:relative; background:#fff;">
+            <div style="position:absolute; inset:0; background-image:url('assets/dish-salmon.jpg'); background-size:cover; background-position:center;"></div>
+            <div style="position:absolute; inset:0; border-radius:50%; border:2px solid rgba(184,151,90,.5);"></div>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#3a352b; text-align:center;">Salmone alla Griglia</div>
+        </div>
+        <div style="flex:none; display:flex; flex-direction:column; align-items:center; gap:12px; width:180px;">
+          <div style="width:172px; height:172px; border-radius:50%; overflow:hidden; box-shadow:0 18px 38px rgba(80,70,50,.18); position:relative; background:#fff;">
+            <div style="position:absolute; inset:0; background-image:url('assets/dish-calamari.jpg'); background-size:cover; background-position:center;"></div>
+            <div style="position:absolute; inset:0; border-radius:50%; border:2px solid rgba(184,151,90,.5);"></div>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#3a352b; text-align:center;">Calamari Fritti</div>
+        </div>
+        <div style="flex:none; display:flex; flex-direction:column; align-items:center; gap:12px; width:180px;">
+          <div style="width:172px; height:172px; border-radius:50%; overflow:hidden; box-shadow:0 18px 38px rgba(80,70,50,.18); position:relative; background:#fff;">
+            <div style="position:absolute; inset:0; background-image:url('assets/dish-entrecot.jpg'); background-size:cover; background-position:center;"></div>
+            <div style="position:absolute; inset:0; border-radius:50%; border:2px solid rgba(184,151,90,.5);"></div>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#3a352b; text-align:center;">Tagliata di Manzo</div>
+        </div>
+        <div style="flex:none; display:flex; flex-direction:column; align-items:center; gap:12px; width:180px;">
+          <div style="width:172px; height:172px; border-radius:50%; overflow:hidden; box-shadow:0 18px 38px rgba(80,70,50,.18); position:relative; background:#fff;">
+            <div style="position:absolute; inset:0; background-image:url('assets/dish-penne.jpg'); background-size:cover; background-position:center;"></div>
+            <div style="position:absolute; inset:0; border-radius:50%; border:2px solid rgba(184,151,90,.5);"></div>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#3a352b; text-align:center;">Penne all'Arrabbiata</div>
+        </div>
+        <div style="flex:none; display:flex; flex-direction:column; align-items:center; gap:12px; width:180px;">
+          <div style="width:172px; height:172px; border-radius:50%; overflow:hidden; box-shadow:0 18px 38px rgba(80,70,50,.18); position:relative; background:#fff;">
+            <div style="position:absolute; inset:0; background-image:url('assets/dish-risotto.jpg'); background-size:cover; background-position:center;"></div>
+            <div style="position:absolute; inset:0; border-radius:50%; border:2px solid rgba(184,151,90,.5);"></div>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#3a352b; text-align:center;">Risotto al Tartufo</div>
+        </div>
+        <div style="flex:none; display:flex; flex-direction:column; align-items:center; gap:12px; width:180px;">
+          <div style="width:172px; height:172px; border-radius:50%; overflow:hidden; box-shadow:0 18px 38px rgba(80,70,50,.18); position:relative; background:#fff;">
+            <div style="position:absolute; inset:0; background-image:url('assets/dish-tartufo.jpg'); background-size:cover; background-position:center;"></div>
+            <div style="position:absolute; inset:0; border-radius:50%; border:2px solid rgba(184,151,90,.5);"></div>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#3a352b; text-align:center;">Bruschetta</div>
+        </div>
+        <div style="flex:none; display:flex; flex-direction:column; align-items:center; gap:12px; width:180px;">
+          <div style="width:172px; height:172px; border-radius:50%; overflow:hidden; box-shadow:0 18px 38px rgba(80,70,50,.18); position:relative; background:#fff;">
+            <div style="position:absolute; inset:0; background-image:url('assets/dish-meat.jpg'); background-size:cover; background-position:center;"></div>
+            <div style="position:absolute; inset:0; border-radius:50%; border:2px solid rgba(184,151,90,.5);"></div>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#3a352b; text-align:center;">Tagliata di Verdure</div>
+        </div>
+        <div style="flex:none; display:flex; flex-direction:column; align-items:center; gap:12px; width:180px;">
+          <div style="width:172px; height:172px; border-radius:50%; overflow:hidden; box-shadow:0 18px 38px rgba(80,70,50,.18); position:relative; background:#fff;">
+            <div style="position:absolute; inset:0; background-image:url('assets/dish-pizza.jpg'); background-size:cover; background-position:center;"></div>
+            <div style="position:absolute; inset:0; border-radius:50%; border:2px solid rgba(184,151,90,.5);"></div>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#3a352b; text-align:center;">Pizza Diavola</div>
+        </div>
+        <div style="flex:none; display:flex; flex-direction:column; align-items:center; gap:12px; width:180px;">
+          <div style="width:172px; height:172px; border-radius:50%; overflow:hidden; box-shadow:0 18px 38px rgba(80,70,50,.18); position:relative; background:#fff;">
+            <div style="position:absolute; inset:0; background-image:url('assets/dish-salmon.jpg'); background-size:cover; background-position:center;"></div>
+            <div style="position:absolute; inset:0; border-radius:50%; border:2px solid rgba(184,151,90,.5);"></div>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#3a352b; text-align:center;">Salmone alla Griglia</div>
+        </div>
+        <div style="flex:none; display:flex; flex-direction:column; align-items:center; gap:12px; width:180px;">
+          <div style="width:172px; height:172px; border-radius:50%; overflow:hidden; box-shadow:0 18px 38px rgba(80,70,50,.18); position:relative; background:#fff;">
+            <div style="position:absolute; inset:0; background-image:url('assets/dish-calamari.jpg'); background-size:cover; background-position:center;"></div>
+            <div style="position:absolute; inset:0; border-radius:50%; border:2px solid rgba(184,151,90,.5);"></div>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#3a352b; text-align:center;">Calamari Fritti</div>
+        </div>
+        <div style="flex:none; display:flex; flex-direction:column; align-items:center; gap:12px; width:180px;">
+          <div style="width:172px; height:172px; border-radius:50%; overflow:hidden; box-shadow:0 18px 38px rgba(80,70,50,.18); position:relative; background:#fff;">
+            <div style="position:absolute; inset:0; background-image:url('assets/dish-entrecot.jpg'); background-size:cover; background-position:center;"></div>
+            <div style="position:absolute; inset:0; border-radius:50%; border:2px solid rgba(184,151,90,.5);"></div>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#3a352b; text-align:center;">Tagliata di Manzo</div>
+        </div>
+        <div style="flex:none; display:flex; flex-direction:column; align-items:center; gap:12px; width:180px;">
+          <div style="width:172px; height:172px; border-radius:50%; overflow:hidden; box-shadow:0 18px 38px rgba(80,70,50,.18); position:relative; background:#fff;">
+            <div style="position:absolute; inset:0; background-image:url('assets/dish-penne.jpg'); background-size:cover; background-position:center;"></div>
+            <div style="position:absolute; inset:0; border-radius:50%; border:2px solid rgba(184,151,90,.5);"></div>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#3a352b; text-align:center;">Penne all'Arrabbiata</div>
+        </div>
+        <div style="flex:none; display:flex; flex-direction:column; align-items:center; gap:12px; width:180px;">
+          <div style="width:172px; height:172px; border-radius:50%; overflow:hidden; box-shadow:0 18px 38px rgba(80,70,50,.18); position:relative; background:#fff;">
+            <div style="position:absolute; inset:0; background-image:url('assets/dish-risotto.jpg'); background-size:cover; background-position:center;"></div>
+            <div style="position:absolute; inset:0; border-radius:50%; border:2px solid rgba(184,151,90,.5);"></div>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#3a352b; text-align:center;">Risotto al Tartufo</div>
+        </div>
+        <div style="flex:none; display:flex; flex-direction:column; align-items:center; gap:12px; width:180px;">
+          <div style="width:172px; height:172px; border-radius:50%; overflow:hidden; box-shadow:0 18px 38px rgba(80,70,50,.18); position:relative; background:#fff;">
+            <div style="position:absolute; inset:0; background-image:url('assets/dish-tartufo.jpg'); background-size:cover; background-position:center;"></div>
+            <div style="position:absolute; inset:0; border-radius:50%; border:2px solid rgba(184,151,90,.5);"></div>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#3a352b; text-align:center;">Bruschetta</div>
+        </div>
+        <div style="flex:none; display:flex; flex-direction:column; align-items:center; gap:12px; width:180px;">
+          <div style="width:172px; height:172px; border-radius:50%; overflow:hidden; box-shadow:0 18px 38px rgba(80,70,50,.18); position:relative; background:#fff;">
+            <div style="position:absolute; inset:0; background-image:url('assets/dish-meat.jpg'); background-size:cover; background-position:center;"></div>
+            <div style="position:absolute; inset:0; border-radius:50%; border:2px solid rgba(184,151,90,.5);"></div>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#3a352b; text-align:center;">Tagliata di Verdure</div>
+        </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" data-screen-label="About" style="position:relative; padding:90px 48px 140px; background:#f4f0e8; overflow:hidden;">
+    <div style="position:absolute; top:-60px; right:-40px; font-family:'Cormorant Garamond',serif; font-size:clamp(180px,30vw,420px); color:#ece5d6; line-height:1; pointer-events:none; user-select:none; z-index:0;">B</div>
+    <div style="position:relative; max-width:1080px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; z-index:2;">
+      <div data-reveal="" style="opacity:0; transform:translateY(40px); transition:opacity 1.1s cubic-bezier(.16,1,.3,1), transform 1.1s cubic-bezier(.16,1,.3,1);">
+        <div data-i18n="about_kicker" style="font-size:12px; letter-spacing:4px; text-transform:uppercase; color:#b8975a; margin-bottom:22px;">Our essence</div>
+        <h2 data-i18n-html="about_title" style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:clamp(36px,4.5vw,56px); line-height:1.08; margin-bottom:26px;">Nuestra <em style="font-style:italic; color:#b8975a;">Esencia</em></h2>
+        <p data-i18n="about_p1" style="font-size:16px; line-height:1.9; color:#5c564a; font-weight:300; margin-bottom:20px;"> Born from a passion for authentic Italian hospitality, Bianco was created to be a bright, welcoming haven on the bustling coastline of Puerto del Carmen. Situated right on the seafront of Avenida de las Playas, our lounge restaurant combines the warmth of Italian culture with the volcanic soul and radiant light of Lanzarote.
+We believe that great food tastes best when paired with an extraordinary environment. That is why we designed Bianco to be a feast for all senses—from the elegant white-and-gold aesthetics and luxury marble touchpoints to the fresh sea breeze that drifts through our open, green-filled space. Our team is dedicated to bringing you the true essence of Italy, sourcing the finest ingredients to create dishes that comfort the soul and delight the palate. From our kitchen to your table, every detail is handled with love. Come for the view, stay for the flavors, and become part of the Bianco family.</p>
+        <p data-i18n="about_p2" style="font-size:16px; line-height:1.9; color:#5c564a; font-weight:300;">From sunlit breakfasts to midnight cocktails, we treat hospitality as an art.</p>
+      </div>
+      <div data-reveal="" style="opacity:0; transform:translateY(40px); transition:opacity 1.1s cubic-bezier(.16,1,.3,1) .15s, transform 1.1s cubic-bezier(.16,1,.3,1) .15s;">
+        <div style="position:relative; aspect-ratio:4/5; overflow:hidden; border-radius:3px; box-shadow:0 30px 60px rgba(80,70,50,.18);">
+          <div data-parallax="0.12" style="position:absolute; inset:-12%; background-image:url('assets/interior-lounge.jpg'); background-size:cover; background-position:center; will-change:transform;"></div>
+        </div>
+        <div style="display:flex; gap:18px; margin-top:18px;">
+          <div style="flex:1; text-align:center; padding:18px 8px; background:#fff; border-radius:3px;">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:34px; color:#b8975a;">4.3</div>
+            <div style="font-size:11px; letter-spacing:2px; text-transform:uppercase; color:#8a8378; margin-top:4px;">Google</div>
+          </div>
+          <div style="flex:1; text-align:center; padding:18px 8px; background:#fff; border-radius:3px;">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:34px; color:#b8975a;">★★★★</div>
+            <div style="font-size:11px; letter-spacing:2px; text-transform:uppercase; color:#8a8378; margin-top:4px;">Tripadvisor</div>
+          </div>
+          <div style="flex:1; text-align:center; padding:18px 8px; background:#fff; border-radius:3px;">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:34px; color:#b8975a;">600+</div>
+            <div style="font-size:11px; letter-spacing:2px; text-transform:uppercase; color:#8a8378; margin-top:4px;"><span data-i18n="about_reviews">Reviews</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE — scroll-driven immersive story -->
+  <section id="experience" data-screen-label="Experience" data-cocktail-wrap="" style="position:relative; height:300vh; background:#f4f0e8;">
+    <div style="position:sticky; top:0; height:100vh; overflow:hidden;">
+      <canvas data-cocktail-canvas="" style="position:absolute; inset:0; width:100%; height:100%; display:block;"></canvas>
+      <div style="position:absolute; top:0; left:0; right:0; height:22vh; background:linear-gradient(#f4f0e8,rgba(244,240,232,0)); pointer-events:none; z-index:2;"></div>
+      <div style="position:absolute; bottom:0; left:0; right:0; height:22vh; background:linear-gradient(rgba(244,240,232,0),#f4f0e8); pointer-events:none; z-index:2;"></div>
+      <div style="position:absolute; top:0; left:0; bottom:0; width:7vw; background:linear-gradient(90deg,rgba(244,240,232,.55),transparent); pointer-events:none; z-index:2;"></div>
+      <div style="position:absolute; top:0; right:0; bottom:0; width:7vw; background:linear-gradient(270deg,rgba(244,240,232,.55),transparent); pointer-events:none; z-index:2;"></div>
+      <div style="position:absolute; inset:0; background:radial-gradient(ellipse 70% 65% at 50% 50%, rgba(244,240,232,0) 28%, rgba(244,240,232,.38) 100%); pointer-events:none; z-index:2;"></div>
+
+      <!-- Persistent title -->
+      <div style="position:absolute; top:0; left:0; right:0; z-index:8; padding:30px 0 22px; text-align:center; pointer-events:none;">
+        <div data-i18n="exp_kicker" style="font-size:11px; letter-spacing:5px; text-transform:uppercase; color:#b8975a; margin-bottom:7px;">The Bianco Experience</div>
+        <h2 data-i18n="exp_title" style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:clamp(26px,3vw,46px); color:#2b2118; line-height:1.05; text-shadow:0 1px 12px rgba(244,240,232,.9);">Facing the Atlantic, in the heart of Lanzarote</h2>
+        <div style="display:flex; gap:8px; justify-content:center; margin-top:14px;">
+          <span data-dot="0" style="width:26px; height:2px; border-radius:2px; background:#b8975a; transition:all .5s ease;"></span>
+          <span data-dot="1" style="width:26px; height:2px; border-radius:2px; background:rgba(184,151,90,.3); transition:all .5s ease;"></span>
+          <span data-dot="2" style="width:26px; height:2px; border-radius:2px; background:rgba(184,151,90,.3); transition:all .5s ease;"></span>
+          <span data-dot="3" style="width:26px; height:2px; border-radius:2px; background:rgba(184,151,90,.3); transition:all .5s ease;"></span>
+        </div>
+      </div>
+
+      <!-- ── STEP 0 : Location & Hours ── -->
+      <div data-step="0" data-step-base="" style="position:absolute; inset:0; z-index:5; transition:opacity .7s cubic-bezier(.16,1,.3,1); pointer-events:none;">
+        <div style="position:absolute; left:3vw; top:50%; transform:translateY(-50%); width:min(23vw,290px); background:rgba(255,255,255,.88); border-radius:24px; padding:28px 26px; box-shadow:0 18px 52px rgba(80,70,50,.13), 0 0 0 1px rgba(184,151,90,.15); backdrop-filter:blur(10px); pointer-events:auto;">
+          <div style="width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,#e7d6ab,#b8975a); display:flex; align-items:center; justify-content:center; margin-bottom:14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div data-i18n="exp_loc_label" style="font-size:11px; letter-spacing:3px; text-transform:uppercase; color:#b8975a; margin-bottom:8px;">Location</div>
+          <div data-i18n="exp_loc_city" style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2b2118; margin-bottom:8px; line-height:1.2;">Puerto del Carmen · Lanzarote</div>
+          <p data-i18n="exp_loc_addr" style="font-size:13px; line-height:1.7; color:#6a6353; font-weight:300;">Av. de las Playas 33 · CC Arena Dorada · Beachfront</p>
+        </div>
+        <div style="position:absolute; right:3vw; top:50%; transform:translateY(-50%); width:min(23vw,290px); background:rgba(255,255,255,.88); border-radius:24px; padding:28px 26px; box-shadow:0 18px 52px rgba(80,70,50,.13), 0 0 0 1px rgba(184,151,90,.15); backdrop-filter:blur(10px); pointer-events:auto;">
+          <div style="width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,#e7d6ab,#b8975a); display:flex; align-items:center; justify-content:center; margin-bottom:14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div data-i18n="exp_hrs_label" style="font-size:11px; letter-spacing:3px; text-transform:uppercase; color:#b8975a; margin-bottom:8px;">Hours</div>
+          <div data-i18n="exp_hrs_days" style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2b2118; margin-bottom:8px;">Every day</div>
+          <p style="font-size:13px; line-height:1.7; color:#6a6353; font-weight:300;"><span data-i18n="exp_hrs_time">10:00 – 00:00</span><br><span data-i18n="exp_hrs_meals">Breakfast · Lunch · Dinner · Cocktails</span></p>
+        </div>
+      </div>
+
+      <!-- ── STEP 1 : Rating & Essence ── -->
+      <div data-step="1" data-step-base="" style="position:absolute; inset:0; z-index:5; opacity:0; transition:opacity .7s cubic-bezier(.16,1,.3,1); pointer-events:none;">
+        <div style="position:absolute; left:3vw; top:44%; transform:translateY(-50%); width:min(23vw,290px); background:rgba(255,255,255,.88); border-radius:24px; padding:28px 26px; box-shadow:0 18px 52px rgba(80,70,50,.13), 0 0 0 1px rgba(184,151,90,.15); backdrop-filter:blur(10px); pointer-events:auto;">
+          <div style="width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,#e7d6ab,#b8975a); display:flex; align-items:center; justify-content:center; margin-bottom:14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <div data-i18n="exp_rat_label" style="font-size:11px; letter-spacing:3px; text-transform:uppercase; color:#b8975a; margin-bottom:8px;">Rating</div>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:32px; color:#b8975a; line-height:1; margin-bottom:6px;">4.3</div>
+          <p data-i18n="exp_rat_text" style="font-size:13px; line-height:1.7; color:#6a6353; font-weight:300;">Over 600 reviews on Google and Tripadvisor · ★★★★</p>
+        </div>
+        <div style="position:absolute; right:3vw; top:56%; transform:translateY(-50%); width:min(23vw,290px); background:rgba(255,255,255,.88); border-radius:24px; padding:28px 26px; box-shadow:0 18px 52px rgba(80,70,50,.13), 0 0 0 1px rgba(184,151,90,.15); backdrop-filter:blur(10px); pointer-events:auto;">
+          <div style="width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,#e7d6ab,#b8975a); display:flex; align-items:center; justify-content:center; margin-bottom:14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+          <div data-i18n="exp_ess_label" style="font-size:11px; letter-spacing:3px; text-transform:uppercase; color:#b8975a; margin-bottom:8px;">Our essence</div>
+          <div data-i18n="exp_ess_title" style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2b2118; margin-bottom:8px; line-height:1.2;">Italian cuisine<br>facing the sea</div>
+          <p data-i18n="exp_ess_desc" style="font-size:13px; line-height:1.7; color:#6a6353; font-weight:300;">White-and-gold lounge restaurant where Italian passion meets the light of Lanzarote.</p>
+        </div>
+      </div>
+
+      <!-- ── STEP 2 : Ambience & Cuisine ── -->
+      <div data-step="2" data-step-base="" style="position:absolute; inset:0; z-index:5; opacity:0; transition:opacity .7s cubic-bezier(.16,1,.3,1); pointer-events:none;">
+        <div style="position:absolute; left:3vw; top:56%; transform:translateY(-50%); width:min(23vw,290px); background:rgba(255,255,255,.88); border-radius:24px; padding:28px 26px; box-shadow:0 18px 52px rgba(80,70,50,.13), 0 0 0 1px rgba(184,151,90,.15); backdrop-filter:blur(10px); pointer-events:auto;">
+          <div style="width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,#e7d6ab,#b8975a); display:flex; align-items:center; justify-content:center; margin-bottom:14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <div data-i18n="exp_amb_label" style="font-size:11px; letter-spacing:3px; text-transform:uppercase; color:#b8975a; margin-bottom:8px;">Atmosphere</div>
+          <div data-i18n="exp_amb_title" style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2b2118; margin-bottom:8px; line-height:1.2;">Terrace & interior<br>facing the sea</div>
+          <p data-i18n="exp_amb_desc" style="font-size:13px; line-height:1.7; color:#6a6353; font-weight:300;">Marble tables, hanging greenery and the Atlantic a few steps away. An elegant refuge.</p>
+        </div>
+        <div style="position:absolute; right:3vw; top:44%; transform:translateY(-50%); width:min(23vw,290px); background:rgba(255,255,255,.88); border-radius:24px; padding:28px 26px; box-shadow:0 18px 52px rgba(80,70,50,.13), 0 0 0 1px rgba(184,151,90,.15); backdrop-filter:blur(10px); pointer-events:auto;">
+          <div style="width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,#e7d6ab,#b8975a); display:flex; align-items:center; justify-content:center; margin-bottom:14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div>
+          <div data-i18n="exp_cui_label" style="font-size:11px; letter-spacing:3px; text-transform:uppercase; color:#b8975a; margin-bottom:8px;">Cuisine</div>
+          <div data-i18n="exp_cui_title" style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2b2118; margin-bottom:8px; line-height:1.2;">Italian · Mediterranean</div>
+          <p data-i18n="exp_cui_desc" style="font-size:13px; line-height:1.7; color:#6a6353; font-weight:300;">Vegan, vegetarian and gluten-free options available. Fresh ingredients, selected every morning.</p>
+        </div>
+      </div>
+
+      <!-- ── STEP 3 : Reserve & Social ── -->
+      <div data-step="3" data-step-base="" style="position:absolute; inset:0; z-index:5; opacity:0; transition:opacity .7s cubic-bezier(.16,1,.3,1); pointer-events:none;">
+        <div style="position:absolute; left:3vw; top:50%; transform:translateY(-50%); width:min(23vw,290px); background:rgba(255,255,255,.88); border-radius:24px; padding:28px 26px; box-shadow:0 18px 52px rgba(80,70,50,.13), 0 0 0 1px rgba(184,151,90,.15); backdrop-filter:blur(10px); pointer-events:auto;">
+          <div style="width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,#e7d6ab,#b8975a); display:flex; align-items:center; justify-content:center; margin-bottom:14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+          <div data-i18n="exp_res_label" style="font-size:11px; letter-spacing:3px; text-transform:uppercase; color:#b8975a; margin-bottom:8px;">Reservations</div>
+          <div data-i18n="exp_res_title" style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2b2118; margin-bottom:10px; line-height:1.2;">Book your table<br>by the sea</div>
+          <a href="#reserve" data-i18n="exp_res_btn" style="display:inline-block; padding:10px 20px; background:#b8975a; border-radius:20px; color:#fff; font-size:12px; letter-spacing:2px; text-transform:uppercase; text-decoration:none; pointer-events:auto;" onmouseover="this.style.background='#c9a86a'" onmouseout="this.style.background='#b8975a'">Reserve now</a>
+        </div>
+        <div style="position:absolute; right:3vw; top:50%; transform:translateY(-50%); width:min(23vw,290px); background:rgba(255,255,255,.88); border-radius:24px; padding:28px 26px; box-shadow:0 18px 52px rgba(80,70,50,.13), 0 0 0 1px rgba(184,151,90,.15); backdrop-filter:blur(10px); pointer-events:auto;">
+          <div style="width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,#e7d6ab,#b8975a); display:flex; align-items:center; justify-content:center; margin-bottom:14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <div data-i18n="exp_soc_label" style="font-size:11px; letter-spacing:3px; text-transform:uppercase; color:#b8975a; margin-bottom:8px;">Follow us</div>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2b2118; margin-bottom:8px;">@bianco_lounge<br><span style="color:#b8975a;">_lanzarote</span></div>
+          <p data-i18n="exp_soc_desc" style="font-size:13px; line-height:1.7; color:#6a6353; font-weight:300;">Instagram · Facebook · Share your experience with us</p>
+        </div>
+        <div style="position:absolute; bottom:11vh; left:50%; transform:translateX(-50%); text-align:center; pointer-events:none; white-space:nowrap;">
+          <div data-i18n="exp_quote" style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(18px,2vw,26px); color:#2b2118; text-shadow:0 1px 10px rgba(244,240,232,.95);">"The luxury of dining facing the ocean, where time stands still."</div>
+        </div>
+      </div>
+
+      <div data-exp-cue="" style="position:absolute; bottom:34px; left:50%; transform:translateX(-50%); z-index:9; display:flex; flex-direction:column; align-items:center; gap:8px; color:#b8975a; transition:opacity .4s ease;">
+        <span data-i18n="exp_scroll" style="font-size:10px; letter-spacing:3px; text-transform:uppercase;">Scroll</span>
+        <div style="width:1px; height:34px; background:linear-gradient(#b8975a,transparent); animation:bob 2.2s ease-in-out infinite;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu" data-screen-label="Menu" style="position:relative; padding:120px 48px 140px; background:#fbf9f4; overflow:hidden; text-align:center;">
+    <div style="position:absolute; top:-60px; right:-40px; font-family:'Cormorant Garamond',serif; font-size:clamp(180px,30vw,420px); color:rgba(180,155,100,.07); line-height:1; pointer-events:none; user-select:none;">M</div>
+
+    <div data-reveal="" style="opacity:0; transform:translateY(40px); transition:opacity 1.1s cubic-bezier(.16,1,.3,1), transform 1.1s cubic-bezier(.16,1,.3,1);">
+      <div style="font-size:12px; letter-spacing:4px; text-transform:uppercase; color:#b8975a; margin-bottom:20px;">Nuestra carta</div>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:clamp(40px,5.5vw,68px); line-height:1; color:#2b2118; margin-bottom:18px;">Cocina italiana<br><em style="font-style:italic; color:#b8975a;">frente al Atlántico</em></h2>
+      <p style="font-size:16px; line-height:1.9; color:#5c564a; font-weight:300; max-width:520px; margin:0 auto 48px;">Pizzas artesanales, pastas frescas, carnes a la brasa y pescados del día. Una selección que cambia con las estaciones y la pesca local.</p>
+
+      <!-- dish photo grid -->
+      <div style="display:flex; gap:24px; padding:48px 0 12px; justify-content:center; flex-wrap:wrap;">
+          <div style="flex:none; width:clamp(200px,22vw,260px); background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 14px 40px rgba(80,70,50,.10); transition:transform .4s cubic-bezier(.16,1,.3,1), box-shadow .4s ease;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 22px 52px rgba(80,70,50,.18)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 14px 40px rgba(80,70,50,.10)'">
+            <div style="height:220px; overflow:hidden;">
+              <img src="assets/dish-pizza.jpg" alt="Pizza Diavola" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s ease;" onmouseover="this.style.transform='scale(1.07)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:18px 22px 22px;">
+              <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2b2118; margin-bottom:5px;">Pizza Diavola</div>
+              <div style="font-size:13px; color:#b8975a; letter-spacing:1px; font-weight:500;">14€</div>
+            </div>
+          </div>
+          <div style="flex:none; width:clamp(200px,22vw,260px); background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 14px 40px rgba(80,70,50,.10); transition:transform .4s cubic-bezier(.16,1,.3,1), box-shadow .4s ease;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 22px 52px rgba(80,70,50,.18)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 14px 40px rgba(80,70,50,.10)'">
+            <div style="height:220px; overflow:hidden;">
+              <img src="assets/dish-salmon.jpg" alt="Salmone alla Griglia" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s ease;" onmouseover="this.style.transform='scale(1.07)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:18px 22px 22px;">
+              <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2b2118; margin-bottom:5px;">Salmone alla Griglia</div>
+              <div style="font-size:13px; color:#b8975a; letter-spacing:1px; font-weight:500;">21€</div>
+            </div>
+          </div>
+          <div style="flex:none; width:clamp(200px,22vw,260px); background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 14px 40px rgba(80,70,50,.10); transition:transform .4s cubic-bezier(.16,1,.3,1), box-shadow .4s ease;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 22px 52px rgba(80,70,50,.18)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 14px 40px rgba(80,70,50,.10)'">
+            <div style="height:220px; overflow:hidden;">
+              <img src="assets/dish-entrecot.jpg" alt="Tagliata di Manzo" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s ease;" onmouseover="this.style.transform='scale(1.07)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:18px 22px 22px;">
+              <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2b2118; margin-bottom:5px;">Tagliata di Manzo</div>
+              <div style="font-size:13px; color:#b8975a; letter-spacing:1px; font-weight:500;">24€</div>
+            </div>
+          </div>
+          <div style="flex:none; width:clamp(200px,22vw,260px); background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 14px 40px rgba(80,70,50,.10); transition:transform .4s cubic-bezier(.16,1,.3,1), box-shadow .4s ease;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 22px 52px rgba(80,70,50,.18)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 14px 40px rgba(80,70,50,.10)'">
+            <div style="height:220px; overflow:hidden;">
+              <img src="assets/dish-risotto.jpg" alt="Risotto al Tartufo" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s ease;" onmouseover="this.style.transform='scale(1.07)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:18px 22px 22px;">
+              <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2b2118; margin-bottom:5px;">Risotto al Tartufo</div>
+              <div style="font-size:13px; color:#b8975a; letter-spacing:1px; font-weight:500;">18€</div>
+            </div>
+          </div>
+      </div>
+
+      </div>
+
+      <div style="margin-top:40px;">
+        <a id="menu-pdf-link" href="#" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:14px; padding:18px 52px; background:#2c281f; color:#d8c08a; text-decoration:none; font-size:13px; letter-spacing:3px; text-transform:uppercase; border-radius:3px; box-shadow:0 10px 32px rgba(44,40,31,.22); transition:background .35s, transform .35s, box-shadow .35s;" onmouseover="this.style.background='#403828';this.style.transform='translateY(-3px)';this.style.boxShadow='0 16px 40px rgba(44,40,31,.32)'" onmouseout="this.style.background='#2c281f';this.style.transform='none';this.style.boxShadow='0 10px 32px rgba(44,40,31,.22)'">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          Ver carta completa
+        </a>
+        <p style="font-size:12px; color:#a89b7f; margin-top:20px; letter-spacing:1px;">PDF · Temporada 2025</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AMBIENCE GALLERY -->
+  <section data-screen-label="Ambience" style="position:relative; padding:0; background:#2c281f; overflow:hidden; display:grid; grid-template-columns:repeat(3,1fr); height:60vh; min-height:420px;">
+    <div style="overflow:hidden; position:relative;"><div data-parallax="0.1" style="position:absolute; inset:-15%; background-image:url('assets/interior-wide.jpg'); background-size:cover; background-position:center;"></div></div>
+    <div style="overflow:hidden; position:relative;"><div data-parallax="0.16" style="position:absolute; inset:-15%; background-image:url('assets/terrace-sea.jpg'); background-size:cover; background-position:center;"></div></div>
+    <div style="overflow:hidden; position:relative;"><div data-parallax="0.1" style="position:absolute; inset:-15%; background-image:url('assets/interior-night.jpg'); background-size:cover; background-position:center;"></div></div>
+    <div style="position:absolute; top:0; left:0; right:0; height:18vh; background:linear-gradient(#f1efec,rgba(241,239,236,0)); pointer-events:none; z-index:4;"></div>
+    <div style="position:absolute; bottom:0; left:0; right:0; height:18vh; background:linear-gradient(rgba(244,240,232,0),#f4f0e8); pointer-events:none; z-index:4;">
+      <!-- ── Watermark cover (bottom-right) ── -->
+      <div style="position:absolute; bottom:0; right:0; width:260px; height:90px; z-index:6; pointer-events:none;
+           background:linear-gradient(to top left, #f4f0e8 38%, rgba(244,240,232,0) 100%);"></div>
+
+      <!-- ── Floating central quote (appears mid-scroll) ── -->
+      <div data-scroll-quote="" style="position:absolute; bottom:18vh; left:50%; transform:translateX(-50%) translateY(24px); z-index:7; text-align:center; opacity:0; transition:opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); pointer-events:none; white-space:nowrap;">
+        <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(15px,1.6vw,22px); color:#2b2118; text-shadow:0 1px 14px rgba(244,240,232,.98); letter-spacing:.5px;">"Donde el sabor italiano se encuentra con el Atlántico"</div>
+        <div style="width:40px; height:1px; background:#b8975a; margin:10px auto 0;"></div>
+      </div>
+
+      <!-- ── Pulsing reserve CTA (appears late-scroll) ── -->
+      <div data-scroll-cta="" style="position:absolute; bottom:10vh; right:4vw; z-index:7; opacity:0; transform:translateY(20px); transition:opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); pointer-events:none;">
+        <a href="#reserve" style="display:flex; align-items:center; gap:10px; padding:14px 24px; background:rgba(184,151,90,.95); border-radius:50px; text-decoration:none; pointer-events:auto; box-shadow:0 8px 32px rgba(184,151,90,.35); animation:pulsechat 2.4s ease-in-out infinite;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span data-i18n="exp_res_btn" style="font-size:12px; letter-spacing:2.5px; text-transform:uppercase; color:#fff; font-weight:500;">Reservar</span>
+        </a>
+      </div>
+
+      <!-- ── Floating mini review (appears early-mid scroll) ── -->
+      <div data-scroll-review="" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) scale(.94); z-index:7; opacity:0; transition:opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); pointer-events:none; width:min(420px,70vw); text-align:center;">
+        <div style="background:rgba(255,255,255,.9); border-radius:20px; padding:22px 28px; box-shadow:0 18px 52px rgba(80,70,50,.13), 0 0 0 1px rgba(184,151,90,.15); backdrop-filter:blur(10px);">
+          <div style="color:#c2a15c; font-size:13px; letter-spacing:3px; margin-bottom:10px;">★★★★★</div>
+          <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:20px; line-height:1.5; color:#3a352b; margin:0 0 12px;">"The best dinner of our holiday in Lanzarote. Beautiful setting and exceptional service."</p>
+          <div style="font-size:12px; letter-spacing:1.5px; text-transform:uppercase; color:#b8975a;">— James P. · Tripadvisor</div>
+        </div>
+      </div>
+</div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section data-screen-label="Reviews" style="position:relative;padding:130px 0;background:#f4f0e8;overflow:hidden;">
+    <div data-reveal="" style="text-align:center;margin-bottom:60px;padding:0 48px;opacity:0;transform:translateY(40px);transition:opacity 1.1s cubic-bezier(.16,1,.3,1),transform 1.1s cubic-bezier(.16,1,.3,1);">
+      <div style="font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#b8975a;margin-bottom:18px;">Lo que dicen los clientes</div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(40px,5.5vw,68px);line-height:1;">Amados en Google &amp; Tripadvisor</h2>
+      <div style="color:#c2a15c;font-size:18px;letter-spacing:4px;margin-top:18px;">★★★★★</div>
+    </div>
+    <div style="position:relative;margin-bottom:22px;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;bottom:0;width:120px;z-index:4;pointer-events:none;background:linear-gradient(90deg,#f4f0e8,rgba(244,240,232,0));"></div>
+      <div style="position:absolute;top:0;right:0;bottom:0;width:120px;z-index:4;pointer-events:none;background:linear-gradient(270deg,#f4f0e8,rgba(244,240,232,0));"></div>
+      <div style="display:flex;gap:20px;width:max-content;padding:10px 11px;animation:marqueeR 55s linear infinite;will-change:transform;"><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"We came for breakfast and dinner, fantastic every time. Lovely staff and the sea view is the perfect finishing touch."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">S</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Sarah M.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#00af87;">Tripadvisor</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"The truffle risotto is spectacular and the white, sea-facing setting is on another level. We will be back."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">M</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Marco R.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#4285f4;">Google</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"Service impeccable et cadre magnifique face à la plage. Une adresse à recommander à Puerto del Carmen."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">C</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Camille D.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#4285f4;">Google</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"Wunderschönes Ambiente, leckere Pizza und sehr freundliches Personal. Wir kommen wieder!"</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">T</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Thomas K.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#00af87;">Tripadvisor</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"The best dinner of our holiday in Lanzarote. Beautiful gold details and luxurious service."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">L</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Lucía F.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#4285f4;">Google</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"Beautiful spot for sunset cocktails. The salmon was cooked to perfection and the service was lovely."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">J</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">James P.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#00af87;">Tripadvisor</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"Elegant decor, pleasant music and delicious cocktails at sunset. A truly beautiful experience."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">E</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Elena G.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#4285f4;">Google</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"Incredible sunset, real Italian food and a sophisticated atmosphere. We will definitely repeat."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">A</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Andrea V.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#4285f4;">Google</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"We came for breakfast and dinner, fantastic every time. Lovely staff and the sea view is the perfect finishing touch."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">S</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Sarah M.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#00af87;">Tripadvisor</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"The truffle risotto is spectacular and the white, sea-facing setting is on another level. We will be back."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">M</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Marco R.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#4285f4;">Google</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"Service impeccable et cadre magnifique face à la plage. Une adresse à recommander à Puerto del Carmen."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">C</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Camille D.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#4285f4;">Google</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"Wunderschönes Ambiente, leckere Pizza und sehr freundliches Personal. Wir kommen wieder!"</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">T</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Thomas K.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#00af87;">Tripadvisor</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"The best dinner of our holiday in Lanzarote. Beautiful gold details and luxurious service."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">L</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Lucía F.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#4285f4;">Google</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"Beautiful spot for sunset cocktails. The salmon was cooked to perfection and the service was lovely."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">J</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">James P.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#00af87;">Tripadvisor</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"Elegant decor, pleasant music and delicious cocktails at sunset. A truly beautiful experience."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">E</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Elena G.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#4285f4;">Google</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"Incredible sunset, real Italian food and a sophisticated atmosphere. We will definitely repeat."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">A</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Andrea V.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#4285f4;">Google</div></div></div></div></div>
+    </div>
+    <div style="position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;bottom:0;width:120px;z-index:4;pointer-events:none;background:linear-gradient(90deg,#f4f0e8,rgba(244,240,232,0));"></div>
+      <div style="position:absolute;top:0;right:0;bottom:0;width:120px;z-index:4;pointer-events:none;background:linear-gradient(270deg,#f4f0e8,rgba(244,240,232,0));"></div>
+      <div style="display:flex;gap:20px;width:max-content;padding:10px 11px;animation:marqueeL 65s linear infinite;will-change:transform;"><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"Incredible sunset, real Italian food and a sophisticated atmosphere. We will definitely repeat."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">A</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Andrea V.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#4285f4;">Google</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"Elegant decor, pleasant music and delicious cocktails at sunset. A truly beautiful experience."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">E</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Elena G.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#4285f4;">Google</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"Beautiful spot for sunset cocktails. The salmon was cooked to perfection and the service was lovely."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">J</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">James P.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#00af87;">Tripadvisor</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"The best dinner of our holiday in Lanzarote. Beautiful gold details and luxurious service."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">L</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Lucía F.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#4285f4;">Google</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"Wunderschönes Ambiente, leckere Pizza und sehr freundliches Personal. Wir kommen wieder!"</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">T</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Thomas K.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#00af87;">Tripadvisor</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"Service impeccable et cadre magnifique face à la plage. Une adresse à recommander à Puerto del Carmen."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">C</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Camille D.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#4285f4;">Google</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"The truffle risotto is spectacular and the white, sea-facing setting is on another level. We will be back."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">M</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Marco R.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#4285f4;">Google</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"We came for breakfast and dinner, fantastic every time. Lovely staff and the sea view is the perfect finishing touch."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">S</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Sarah M.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#00af87;">Tripadvisor</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"Incredible sunset, real Italian food and a sophisticated atmosphere. We will definitely repeat."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">A</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Andrea V.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#4285f4;">Google</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"Elegant decor, pleasant music and delicious cocktails at sunset. A truly beautiful experience."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">E</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Elena G.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#4285f4;">Google</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"Beautiful spot for sunset cocktails. The salmon was cooked to perfection and the service was lovely."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">J</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">James P.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#00af87;">Tripadvisor</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"The best dinner of our holiday in Lanzarote. Beautiful gold details and luxurious service."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">L</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Lucía F.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#4285f4;">Google</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"Wunderschönes Ambiente, leckere Pizza und sehr freundliches Personal. Wir kommen wieder!"</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">T</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Thomas K.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#00af87;">Tripadvisor</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"Service impeccable et cadre magnifique face à la plage. Une adresse à recommander à Puerto del Carmen."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">C</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Camille D.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#4285f4;">Google</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"The truffle risotto is spectacular and the white, sea-facing setting is on another level. We will be back."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">M</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Marco R.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#4285f4;">Google</div></div></div></div><div style="flex:none;width:320px;min-height:190px;background:#fff;border-radius:5px;padding:26px 24px;box-shadow:0 12px 32px rgba(80,70,50,.07);display:flex;flex-direction:column;gap:12px;"><div style="color:#c2a15c;font-size:13px;letter-spacing:3px;">★★★★★</div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.45;color:#3a352b;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;margin:0;">"We came for breakfast and dinner, fantastic every time. Lovely staff and the sea view is the perfect finishing touch."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e7d6ab,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:15px;flex:none;">S</div><div><div style="font-size:12px;font-weight:500;color:#2c281f;">Sarah M.</div><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#00af87;">Tripadvisor</div></div></div></div></div>
+    </div>
+    <div style="text-align:center;margin-top:54px;">
+      <a href="https://www.tripadvisor.com/Search?q=Bianco+Ristorante+Puerto+del+Carmen" target="_blank" rel="noopener"
+         style="display:inline-flex;align-items:center;gap:10px;padding:14px 32px;border:1.5px solid rgba(184,151,90,.4);border-radius:3px;text-decoration:none;color:#3a352b;font-family:'Cormorant Garamond',serif;font-size:17px;"
+         onmouseover="this.style.background='rgba(184,151,90,.08)'" onmouseout="this.style.background=''">
+        Ver todas las reseñas en Tripadvisor
+      </a>
+    </div>
+  </section>
+  <!-- RESERVE -->
+  <section id="reserve" data-screen-label="Reserve" style="position:relative;padding:130px 48px;background:#2c281f;overflow:hidden;">
+    <div style="position:relative;z-index:2;max-width:580px;margin:0 auto;text-align:center;">
+      <div style="font-size:11px;letter-spacing:5px;text-transform:uppercase;color:#b8975a;margin-bottom:18px;">Reservations</div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,5vw,64px);color:#f4f0e8;line-height:1.08;margin:0 0 18px;">Reserve tu mesa<br><em>junto al mar</em></h2>
+      <p style="font-size:14px;line-height:1.8;color:#a89b7f;margin:0 0 48px;">Llámanos y te reservamos la mesa en el momento. Abiertos todos los días.</p>
+      <a href="tel:+34928339337" style="display:inline-flex;align-items:center;gap:16px;padding:20px 48px;background:linear-gradient(135deg,#d8c08a,#b8975a);border-radius:3px;text-decoration:none;color:#fff;letter-spacing:3px;text-transform:uppercase;box-shadow:0 10px 32px rgba(184,151,90,.4);" onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.54 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <div style="text-align:left;">
+          <div style="font-size:11px;letter-spacing:3px;opacity:.8;margin-bottom:3px;">Reservar por teléfono</div>
+          <div style="font-size:20px;font-family:'Cormorant Garamond',serif;font-weight:500;letter-spacing:2px;">928 33 93 37</div>
+        </div>
+      </a>
+      <div style="margin-top:36px;">
+        <div style="font-size:13px;color:#6a6353;letter-spacing:1px;">Todos los días · 10:00 – 00:00</div>
+        <div style="font-size:12px;color:#4a453d;letter-spacing:.5px;margin-top:6px;">Av. de las Playas 33 · CC Arena Dorada · Puerto del Carmen</div>
+      </div>
+    </div>
+  </section>
+  <!-- MAP -->
+  <section style="background:#1a1711;">
+    <div style="display:flex;flex-wrap:wrap;align-items:stretch;">
+      <div style="flex:1;min-width:280px;padding:64px 52px;display:flex;flex-direction:column;justify-content:center;gap:28px;">
+        <div>
+          <div style="font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#b8975a;margin-bottom:14px;">Cómo llegar</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.5vw,42px);color:#f4f0e8;line-height:1.15;">Bianco Ristorante<br><em style="color:#b8975a;font-style:italic;">Puerto del Carmen</em></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div style="display:flex;gap:14px;align-items:flex-start;">
+            <div style="width:36px;height:36px;border-radius:50%;background:rgba(184,151,90,.15);display:flex;align-items:center;justify-content:center;flex:none;margin-top:2px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#b8975a" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div style="font-size:13px;color:#f4f0e8;line-height:1.7;">Av. de las Playas 33<br>CC Arena Dorada<br>Puerto del Carmen, Lanzarote</div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:center;">
+            <div style="width:36px;height:36px;border-radius:50%;background:rgba(184,151,90,.15);display:flex;align-items:center;justify-content:center;flex:none;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#b8975a" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div style="font-size:13px;color:#f4f0e8;">Todos los días · 10:00 – 00:00</div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:center;">
+            <div style="width:36px;height:36px;border-radius:50%;background:rgba(184,151,90,.15);display:flex;align-items:center;justify-content:center;flex:none;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#b8975a" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.54 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <a href="tel:+34928339337" style="font-size:13px;color:#b8975a;text-decoration:none;">928 33 93 37</a>
+          </div>
+        </div>
+        <a href="https://maps.google.com/?q=Bianco+Ristorante+Av+de+las+Playas+33+Puerto+del+Carmen" target="_blank" rel="noopener"
+           style="display:inline-flex;align-items:center;gap:10px;padding:13px 28px;border:1.5px solid rgba(184,151,90,.4);border-radius:3px;text-decoration:none;color:#b8975a;font-size:11px;letter-spacing:3px;text-transform:uppercase;align-self:flex-start;"
+           onmouseover="this.style.background='rgba(184,151,90,.1)'" onmouseout="this.style.background='transparent'">
+          Abrir en Google Maps
+        </a>
+      </div>
+      <div style="flex:2;min-width:300px;min-height:420px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3488!2d-13.6604!3d28.9217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc461955b8f71a45%3A0x5d28cb1a7de29aad!2sBianco%20Ristorante!5e0!3m2!1ses!2ses!4v1700000000000"
+          width="100%" height="100%" style="border:0;display:block;min-height:420px;"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación Bianco Ristorante">
+        </iframe>
+      </div>
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <footer style="background:#1a1711;padding:48px 48px 36px;display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;justify-content:space-between;">
+    <div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:26px;letter-spacing:5px;color:#f4f0e8;margin-bottom:8px;">BIANCO</div>
+      <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#4a453d;">Puerto del Carmen · Lanzarote</div>
+    </div>
+    <div style="display:flex;gap:48px;flex-wrap:wrap;">
+      <div>
+        <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#6a6353;margin-bottom:12px;">Horario</div>
+        <div style="font-size:13px;color:#a89b7f;line-height:1.8;">Todos los días<br>10:00 – 00:00</div>
+      </div>
+      <div>
+        <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#6a6353;margin-bottom:12px;">Dirección</div>
+        <div style="font-size:13px;color:#a89b7f;line-height:1.8;">Av. de las Playas 33<br>CC Arena Dorada<br>Puerto del Carmen, Lanzarote</div>
+      </div>
+      <div>
+        <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#6a6353;margin-bottom:12px;">Social</div>
+        <a href="https://www.instagram.com/bianco_lounge_lanzarote" target="_blank" rel="noopener" style="display:block;font-size:13px;color:#c9c0ad;text-decoration:none;line-height:2;" onmouseover="this.style.color='#d8c08a'" onmouseout="this.style.color='#c9c0ad'">Instagram</a>
+        <a href="#" style="display:block;font-size:13px;color:#c9c0ad;text-decoration:none;line-height:2;" onmouseover="this.style.color='#d8c08a'" onmouseout="this.style.color='#c9c0ad'">Facebook</a>
+      </div>
+    </div>
+    <div style="width:100%;border-top:1px solid rgba(255,255,255,.05);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+      <div style="font-size:11px;color:#4a453d;">© 2025 Bianco Ristorante. Todos los derechos reservados.</div>
+      <a href="#top" style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#6a6353;text-decoration:none;" onmouseover="this.style.color='#b8975a'" onmouseout="this.style.color='#6a6353'">Volver arriba ↑</a>
+    </div>
+  </footer>
+<script>
+// DC runtime shim — provides DCLogic base class and mounts the component
+(function() {
+  class DCLogic {}
+
+  // sc-for loop expander — processes template loops before component mounts
+  function expandLoops(data) {
+    document.querySelectorAll('sc-for').forEach(function(tpl) {
+      var listAttr = tpl.getAttribute('list') || '';
+      var m = listAttr.match(/\{\{\s*(\w+)\s*\}\}/);
+      var as = tpl.getAttribute('as');
+      if (!m || !as) return;
+      var items = data[m[1]] || [];
+      var inner = tpl.innerHTML;
+      var parent = tpl.parentNode;
+      items.forEach(function(item) {
+        var h = inner;
+        Object.keys(item).forEach(function(k) {
+          h = h.split('{{' + as + '.' + k + '}}').join(item[k] || '');
+          h = h.split('{{ ' + as + '.' + k + ' }}').join(item[k] || '');
+        });
+        var wrap = document.createElement('div');
+        wrap.style.display = 'contents';
+        wrap.innerHTML = h;
+        parent.insertBefore(wrap, tpl);
+      });
+      tpl.remove();
+    });
+  }
+
+  // Mount when DOM is ready
+  (function() {
+    
+class Component extends DCLogic {
+  componentDidMount() {
+    const root = document;
+    this.FRAME_COUNT = 90;
+    this._frames = new Array(this.FRAME_COUNT).fill(null);
+    this._curFrame = -1;
+    this._framesReady = false;
+    this._capState = 0;
+    this._history = [];
+    this._busy = false;
+
+    this.T = this.translations();
+
+    // ---- i18n: capture English baseline, then apply saved language ----
+    this._i18nEls = Array.from(root.querySelectorAll('[data-i18n]'));
+    this._i18nEls.forEach(el => { el._en = el.textContent; });
+    this._i18nHtmlEls = Array.from(root.querySelectorAll('[data-i18n-html]'));
+    this._i18nHtmlEls.forEach(el => { el._en = el.innerHTML; });
+    this._i18nPhEls = Array.from(root.querySelectorAll('[data-i18n-ph]'));
+    this._i18nPhEls.forEach(el => { el._enPh = el.getAttribute('placeholder') || ''; });
+
+    root.querySelectorAll('[data-lang-btn]').forEach(btn => {
+      btn.addEventListener('click', () => this.setLang(btn.getAttribute('data-lang-btn')));
+    });
+
+    // ---- social dropdown ----
+    const sTog = root.querySelector('[data-social-toggle]');
+    const sMenu = root.querySelector('[data-social-menu]');
+    const sCaret = root.querySelector('[data-social-caret]');
+    if (sTog && sMenu) {
+      const setOpen = (o) => { sMenu.style.opacity = o ? '1' : '0'; sMenu.style.transform = o ? 'none' : 'translateY(-8px)'; sMenu.style.pointerEvents = o ? 'auto' : 'none'; if (sCaret) sCaret.style.transform = o ? 'rotate(180deg)' : 'none'; this._socialOpen = o; };
+      sTog.addEventListener('click', (e) => { e.stopPropagation(); setOpen(!this._socialOpen); });
+      sMenu.addEventListener('click', (e) => e.stopPropagation());
+      document.addEventListener('click', () => { if (this._socialOpen) setOpen(false); });
+    }
+    let saved = 'en';
+    try { saved = localStorage.getItem('bianco_lang') || 'en'; } catch (e) {}
+    if (saved !== 'en') this.setLang(saved); else this.setLang('en');
+
+    // ---- socials + reservation links ----
+    this.applyLinks();
+    this.applyHeroVariant();
+
+    // ---- expandable carta ----
+    const cartaToggle = root.querySelector('[data-carta-toggle]');
+    const cartaPanel = root.querySelector('[data-carta-panel]');
+    if (cartaToggle && cartaPanel) {
+      cartaToggle.addEventListener('click', () => {
+        const open = cartaPanel.style.maxHeight && cartaPanel.style.maxHeight !== '0px';
+        cartaPanel.style.maxHeight = open ? '0px' : cartaPanel.scrollHeight + 80 + 'px';
+        cartaPanel.style.opacity = open ? '0' : '1';
+      });
+    }
+
+    // ---- AI chat ----
+    const sendBtn = root.querySelector('[data-chat-send]');
+    const input = root.querySelector('[data-chat-input]');
+    if (sendBtn) sendBtn.addEventListener('click', () => this.sendChat(input && input.value));
+    if (input) input.addEventListener('keydown', (e) => { if (e.key === 'Enter') this.sendChat(input.value); });
+    root.querySelectorAll('[data-chip]').forEach(chip => {
+      chip.addEventListener('click', () => { if (input) input.value = chip.textContent; this.sendChat(chip.textContent); });
+    });
+
+    // ---- reveal on scroll ----
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'none'; io.unobserve(e.target); } });
+    }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
+    root.querySelectorAll('[data-reveal]').forEach((el) => io.observe(el));
+    this._io = io;
+
+    // ---- tilt cards ----
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const touch = window.matchMedia('(hover: none)').matches;
+    if (!reduce && !touch) {
+      root.querySelectorAll('[data-tilt]').forEach((card) => {
+        card.addEventListener('mousemove', (ev) => {
+          const r = card.getBoundingClientRect();
+          const px = (ev.clientX - r.left) / r.width - 0.5;
+          const py = (ev.clientY - r.top) / r.height - 0.5;
+          card.style.transition = 'transform .15s cubic-bezier(.16,1,.3,1), box-shadow .4s ease';
+          card.style.transform = 'rotateY(' + (px * 9).toFixed(2) + 'deg) rotateX(' + (-py * 9).toFixed(2) + 'deg) translateY(-8px) scale(1.015)';
+          card.style.boxShadow = '0 34px 70px rgba(80,70,50,.22)';
+          card.style.zIndex = '5';
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.transition = 'transform .7s cubic-bezier(.16,1,.3,1), box-shadow .6s ease';
+          card.style.transform = 'none'; card.style.boxShadow = '0 18px 40px rgba(80,70,50,.08)'; card.style.zIndex = '';
+        });
+      });
+    }
+
+    // ---- cocktail canvas ----
+    this._cocktailWrap = root.querySelector('[data-cocktail-wrap]');
+    this._cv = root.querySelector('[data-cocktail-canvas]');
+    if (this._cv) this._cvctx = this._cv.getContext('2d');
+    this._steps = Array.from(root.querySelectorAll('[data-step]'));
+    this._dots = Array.from(root.querySelectorAll('[data-dot]'));
+    this._expCue = root.querySelector('[data-exp-cue]');
+    this._stepState = 0;
+    if (this._cocktailWrap) {
+      const cio = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) { this.loadFrames(); cio.disconnect(); } });
+      }, { rootMargin: '600px 0px' });
+      cio.observe(this._cocktailWrap);
+      this._cio = cio;
+    }
+
+    // ---- parallax + nav + hero + cocktail (single rAF scroll) ----
+    const parallaxEls = Array.from(root.querySelectorAll('[data-parallax]'));
+    const progress = root.querySelector('[data-progress]');
+    const nav = root.querySelector('[data-nav]');
+    const navLogo = root.querySelector('[data-nav-logo]');
+    const navLinks = root.querySelector('[data-nav-links]');
+    const navLang = root.querySelector('[data-nav-lang]');
+    const navSocial = root.querySelector('[data-nav-social]');
+    const heroContent = root.querySelector('[data-hero-content]');
+    const heroBg = root.querySelector('[data-hero-bg]');
+    const heroCue = root.querySelector('[data-hero-cue]');
+    let ticking = false;
+    const render = () => {
+      ticking = false;
+      const sy = window.scrollY;
+      const vh = window.innerHeight;
+      const h = document.documentElement.scrollHeight - vh;
+      if (progress) progress.style.width = Math.min(100, (sy / Math.max(1, h)) * 100) + '%';
+      if (heroContent) { heroContent.style.transform = 'translateY(' + sy * 0.28 + 'px)'; heroContent.style.opacity = String(Math.max(0, 1 - sy / 560)); }
+      if (heroCue) heroCue.style.opacity = String(Math.max(0, 1 - sy / 320));
+      if (heroBg) heroBg.style.transform = 'translateY(' + sy * 0.18 + 'px)';
+      parallaxEls.forEach((el) => {
+        const speed = parseFloat(el.getAttribute('data-parallax')) || 0.1;
+        const r = el.getBoundingClientRect();
+        const offset = (r.top + r.height / 2 - vh / 2);
+        el.style.transform = 'translateY(' + (-offset * speed) + 'px)';
+      });
+      const solid = sy > vh * 0.72;
+      if (nav) { nav.style.background = solid ? 'rgba(247,244,238,.92)' : 'transparent'; nav.style.boxShadow = solid ? '0 1px 20px rgba(80,70,50,.08)' : 'none'; nav.style.padding = solid ? '14px 48px' : '22px 48px'; nav.style.backdropFilter = solid ? 'blur(10px)' : 'none'; }
+      const col = solid ? '#2c281f' : '#fff';
+      if (navLogo) navLogo.style.color = col;
+      if (navLinks) navLinks.style.color = col;
+      if (navLang) navLang.style.color = col;
+      if (navSocial) navSocial.style.color = col;
+      // cocktail frames
+      if (this._cocktailWrap) {
+        const r = this._cocktailWrap.getBoundingClientRect();
+        const total = this._cocktailWrap.offsetHeight - vh;
+        const scrolled = Math.min(Math.max(-r.top, 0), total);
+        const p = total > 0 ? scrolled / total : 0;
+        if (this._framesReady) {
+          const idx = Math.round(p * (this.FRAME_COUNT - 1));
+          if (idx !== this._curFrame) { this._curFrame = idx; this.drawCocktailFrame(this.nearestLoaded(idx)); }
+        }
+        const step = Math.max(0, Math.min(3, Math.floor(p * 4)));
+        if (step !== this._stepState) {
+          this._stepState = step;
+          this._steps.forEach((el, i) => {
+            const on = i === step;
+            el.style.opacity = on ? '1' : '0';
+            el.style.transform = on ? (el.dataset.stepBase || 'none') : ((el.dataset.stepBase || '') + ' translateY(18px)');
+            el.style.pointerEvents = on ? 'auto' : 'none';
+          });
+          this._dots.forEach((d, i) => { d.style.background = i <= step ? '#b8975a' : '#dccfb2'; });
+        }
+        if (this._expCue) this._expCue.style.opacity = String(p > 0.85 ? 0 : 1);
+
+        // floating quote: visible between 35%–75% of scroll
+        const quote = document.querySelector('[data-scroll-quote]');
+        if (quote) {
+          const qOn = p > 0.35 && p < 0.75;
+          quote.style.opacity = qOn ? '1' : '0';
+          quote.style.transform = 'translateX(-50%) translateY(' + (qOn ? '0' : '24px') + ')';
+        }
+        // mini review card: visible between 20%–55%
+        const rev = document.querySelector('[data-scroll-review]');
+        if (rev) {
+          const rOn = p > 0.20 && p < 0.55;
+          rev.style.opacity = rOn ? '1' : '0';
+          rev.style.transform = 'translate(-50%,-50%) scale(' + (rOn ? '1' : '.94') + ')';
+        }
+        // pulsing CTA: visible after 60%
+        const cta = document.querySelector('[data-scroll-cta]');
+        if (cta) {
+          const cOn = p > 0.60;
+          cta.style.opacity = cOn ? '1' : '0';
+          cta.style.transform = 'translateY(' + (cOn ? '0' : '20px') + ')';
+          cta.style.pointerEvents = cOn ? 'auto' : 'none';
+        }
+      }
+    };
+    const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(render); } };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', () => { this.drawCocktailFrame(this.nearestLoaded(this._curFrame < 0 ? 0 : this._curFrame)); onScroll(); }, { passive: true });
+    render();
+    this._onScroll = onScroll;
+
+    // ---- hero entrance ----
+    const enterEls = Array.from(root.querySelectorAll('[data-enter]'));
+    enterEls.forEach((el) => { el.style.opacity = '0'; el.style.transform = 'translateY(46px)'; el.style.transition = 'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'; });
+    enterEls.forEach((el, i) => { setTimeout(() => { el.style.opacity = '1'; el.style.transform = 'none'; }, 120 + i * 80); });
+    setTimeout(() => enterEls.forEach((el) => { el.style.opacity = '1'; el.style.transform = 'none'; }), 1700);
+
+    // ---- hero mouse parallax + spotlight ----
+    const hero = root.querySelector('[data-hero]');
+    const depthEls = Array.from(root.querySelectorAll('[data-depth]'));
+    const spotlight = root.querySelector('[data-spotlight]');
+    if (hero && !reduce) {
+      let raf = null, lx = 0, ly = 0;
+      const apply = () => { raf = null;
+        depthEls.forEach((el) => { const d = parseFloat(el.getAttribute('data-depth')) || 0; el.style.transform = 'translate(' + (lx * d).toFixed(1) + 'px,' + (ly * d).toFixed(1) + 'px)'; });
+        if (spotlight) spotlight.style.background = 'radial-gradient(480px circle at ' + ((lx + 0.5) * 100).toFixed(1) + '% ' + ((ly + 0.5) * 100).toFixed(1) + '%, rgba(216,192,138,.22), transparent 66%)';
+      };
+      const onMouse = (ev) => { const r = hero.getBoundingClientRect(); lx = (ev.clientX - r.left) / r.width - 0.5; ly = (ev.clientY - r.top) / r.height - 0.5; if (!raf) raf = requestAnimationFrame(apply); };
+      hero.addEventListener('mousemove', onMouse, { passive: true });
+      hero.addEventListener('mouseleave', () => { lx = 0; ly = 0; if (!raf) raf = requestAnimationFrame(apply); });
+    }
+  }
+
+  componentDidUpdate() { this.applyHeroVariant(); this.applyLinks(); }
+
+  applyLinks() {
+    const root = document;
+    const ig = this.props.igUrl || 'https://www.instagram.com/bianco_lounge_lanzarote/';
+    const fb = this.props.fbUrl || 'https://www.facebook.com/p/Bianco-Ristorante-100093828896263/';
+    root.querySelectorAll('[data-ig]').forEach(a => a.href = ig);
+    root.querySelectorAll('[data-fb]').forEach(a => a.href = fb);
+    const phoneRaw = (this.props.phone || '').trim();
+    const tel = phoneRaw.replace(/[^+0-9]/g, '');
+    const call = root.querySelector('[data-reserve-call]');
+    const wa = root.querySelector('[data-reserve-wa]');
+    if (call) call.href = tel ? ('tel:' + tel) : ig;
+    if (wa) wa.href = tel ? ('https://wa.me/' + tel.replace(/^\+/, '')) : ig;
+  }
+
+  applyHeroVariant() {
+    const v = this.props.heroVariant || 'classic';
+    const img = document.querySelector('[data-hero-img]');
+    const inner = document.querySelector('[data-hero-inner]');
+    const content = document.querySelector('[data-hero-content]');
+    const wash = document.querySelector('[data-hero-wash]');
+    if (!img) return;
+    if (v === 'editorial') {
+      img.style.backgroundImage = "url('assets/terrace-sea.jpg')";
+      img.style.backgroundPosition = 'center 55%';
+      if (content) content.style.justifyContent = 'flex-start';
+      if (inner) { inner.style.textAlign = 'left'; inner.style.paddingLeft = '8vw'; }
+      if (wash) wash.style.background = 'linear-gradient(110deg, rgba(20,18,12,.5) 0%, rgba(20,18,12,.2) 45%, rgba(244,240,232,.3) 80%, #f4f0e8 100%)';
+    } else {
+      img.style.backgroundImage = "url('assets/hero-interior.jpg')";
+      img.style.backgroundPosition = 'center 42%';
+      if (content) content.style.justifyContent = 'center';
+      if (inner) { inner.style.textAlign = 'center'; inner.style.paddingLeft = '0'; }
+      if (wash) wash.style.background = 'linear-gradient(180deg, rgba(247,243,236,.34) 0%, rgba(247,243,236,.12) 28%, rgba(244,240,232,.55) 68%, rgba(244,240,232,.94) 88%, #f4f0e8 100%)';
+    }
+  }
+
+  setLang(lang) {
+    const t = this.T[lang] || {};
+    this._i18nEls.forEach(el => { const k = el.getAttribute('data-i18n'); el.textContent = (lang === 'en') ? el._en : (t[k] != null ? t[k] : el._en); });
+    this._i18nHtmlEls.forEach(el => { const k = el.getAttribute('data-i18n-html'); el.innerHTML = (lang === 'en') ? el._en : (t[k] != null ? t[k] : el._en); });
+    this._i18nPhEls.forEach(el => { const k = el.getAttribute('data-i18n-ph'); el.setAttribute('placeholder', (lang === 'en') ? el._enPh : (t[k] != null ? t[k] : el._enPh)); });
+    document.querySelectorAll('[data-lang-btn]').forEach(btn => {
+      const on = btn.getAttribute('data-lang-btn') === lang;
+      btn.style.opacity = on ? '1' : '.55';
+      btn.style.fontWeight = on ? '500' : '400';
+      btn.style.borderBottom = on ? '1px solid #c2a15c' : '1px solid transparent';
+    });
+    this._lang = lang;
+    try { localStorage.setItem('bianco_lang', lang); document.documentElement.lang = lang; } catch (e) {}
+  }
+
+  loadFrames() {
+    if (this._loading) return; this._loading = true;
+    const base = 'assets/vframes/v';
+    const load = (i) => new Promise((res) => {
+      const im = new Image();
+      im.onload = () => { this._frames[i] = im; if (!this._framesReady) { this._framesReady = true; this.drawCocktailFrame(i); } res(); };
+      im.onerror = () => res();
+      im.src = base + String(i).padStart(3, '0') + '.jpg';
+    });
+    const eager = [];
+    for (let i = 0; i < 12; i++) eager.push(i);
+    (async () => {
+      for (const i of eager) await load(i);
+      this.drawCocktailFrame(this.nearestLoaded(0));
+      // background: load the rest in small parallel batches
+      const rest = [];
+      for (let i = 12; i < this.FRAME_COUNT; i++) rest.push(i);
+      const batch = 6;
+      for (let i = 0; i < rest.length; i += batch) {
+        await Promise.all(rest.slice(i, i + batch).map(load));
+        this.drawCocktailFrame(this.nearestLoaded(this._curFrame < 0 ? 0 : this._curFrame));
+      }
+    })();
+  }
+
+  nearestLoaded(idx) {
+    if (idx == null || idx < 0) idx = 0;
+    if (this._frames[idx]) return idx;
+    for (let d = 1; d < this.FRAME_COUNT; d++) {
+      if (idx - d >= 0 && this._frames[idx - d]) return idx - d;
+      if (idx + d < this.FRAME_COUNT && this._frames[idx + d]) return idx + d;
+    }
+    return idx;
+  }
+
+  drawCocktailFrame(idx) {
+    const cv = this._cv, ctx = this._cvctx; if (!cv || !ctx) return;
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    const cw = cv.clientWidth, ch = cv.clientHeight;
+    if (cv.width !== Math.round(cw * dpr) || cv.height !== Math.round(ch * dpr)) { cv.width = Math.round(cw * dpr); cv.height = Math.round(ch * dpr); }
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.fillStyle = '#f4f0e8'; ctx.fillRect(0, 0, cw, ch);
+    const img = this._frames[idx]; if (!img) return;
+    const iw = img.naturalWidth, ih = img.naturalHeight;
+    const scale = Math.min(cw / iw, ch / ih) * 0.94;
+    const dw = iw * scale, dh = ih * scale;
+    ctx.drawImage(img, (cw - dw) / 2, (ch - dh) / 2, dw, dh);
+  }
+
+  async sendChat(text) {
+    text = (text || '').trim(); if (!text || this._busy) return;
+    this._busy = true;
+    const log = document.querySelector('[data-chat-log]');
+    const input = document.querySelector('[data-chat-input]');
+    if (input) input.value = '';
+    this.addBubble(log, 'user', text);
+    const typing = this.addTyping(log);
+    try {
+      const persona = "You are the digital concierge for Bianco Ristorante, a white-and-gold Italian restaurant and cocktail lounge on the beachfront of Avenida de las Playas 33 (CC Arena Dorada), Puerto del Carmen, Tias, Lanzarote. Open every day 10:00-00:00, serving breakfast, lunch, dinner and cocktails. Menu highlights: Pizza Diavola, Margherita, Quattro Formaggi, Salmone alla Griglia, Tagliata di Manzo, Calamari Fritti, Penne all'Arrabbiata, Spaghetti alle Vongole, Risotto al Tartufo, Bruschetta, Burrata, desserts (Tiramisu, Panna Cotta) and signature cocktails (Frozen Strawberry, Aperol Spritz, Negroni). Mains roughly 12-24 EUR. Vegan, vegetarian and gluten-free options available on request. Style: warm, elegant and concise (2-4 sentences). ALWAYS reply in the SAME language the guest writes in. For reservations, invite the guest to call the restaurant (the phone number is on our Instagram @bianco_lounge_lanzarote and Facebook). Mention the sea view and sunset when relevant. If unsure of a specific detail, suggest calling or visiting.";
+      const primed = [
+        { role: 'user', content: persona + "\n\nYou are now chatting with a guest on the website. Greet only if they greet you." },
+        { role: 'assistant', content: 'Understood. I am the Bianco concierge and will reply in the guest\u2019s language.' }
+      ].concat(this._history.slice(-8)).concat([{ role: 'user', content: text }]);
+      let reply = '';
+      if (window.claude && window.claude.complete) {
+        reply = await window.claude.complete({ messages: primed });
+      } else {
+        throw new Error('no-api');
+      }
+      if (typing && typing.remove) typing.remove();
+      this.addBubble(log, 'bot', (reply || '').trim() || this.fallbackMsg());
+      this._history.push({ role: 'user', content: text }, { role: 'assistant', content: reply });
+    } catch (e) {
+      if (typing && typing.remove) typing.remove();
+      this.addBubble(log, 'bot', this.fallbackMsg());
+    }
+    this._busy = false;
+  }
+
+  fallbackMsg() {
+    const m = {
+      en: 'Thank you! For the fastest answer or to reserve, please call us \u2014 the number is on our Instagram @bianco_lounge_lanzarote. We are open every day 09:00\u201300:00.',
+      es: '\u00a1Gracias! Para una respuesta inmediata o reservar, ll\u00e1manos \u2014 el n\u00famero est\u00e1 en nuestro Instagram @bianco_lounge_lanzarote. Abrimos todos los d\u00edas de 09:00 a 00:00.',
+      fr: 'Merci ! Pour une r\u00e9ponse rapide ou r\u00e9server, appelez-nous \u2014 le num\u00e9ro est sur notre Instagram @bianco_lounge_lanzarote. Ouvert tous les jours de 09h00 \u00e0 00h00.',
+      de: 'Danke! F\u00fcr eine schnelle Antwort oder Reservierung rufen Sie uns an \u2014 die Nummer steht auf unserem Instagram @bianco_lounge_lanzarote. T\u00e4glich von 09:00 bis 00:00 ge\u00f6ffnet.'
+    };
+    return m[this._lang] || m.en;
+  }
+
+  addBubble(log, who, text) {
+    if (!log) return;
+    const d = document.createElement('div');
+    const user = who === 'user';
+    d.style.cssText = 'max-width:88%; padding:12px 16px; font-size:14px; line-height:1.6; white-space:pre-wrap; ' +
+      (user
+        ? 'align-self:flex-end; background:#b8975a; color:#fff; border-radius:16px 16px 4px 16px;'
+        : 'align-self:flex-start; background:#fff; color:#3a352b; border-radius:16px 16px 16px 4px; box-shadow:0 3px 10px rgba(80,70,50,.06);');
+    d.textContent = text;
+    log.appendChild(d);
+    log.scrollTop = log.scrollHeight;
+  }
+
+  addTyping(log) {
+    if (!log) return null;
+    const w = document.createElement('div');
+    w.style.cssText = 'align-self:flex-start; display:flex; gap:5px; padding:10px 6px;';
+    for (let i = 0; i < 3; i++) { const s = document.createElement('span'); s.style.cssText = 'width:7px; height:7px; border-radius:50%; background:#c2a15c; animation:typing 1.2s ease-in-out infinite ' + (i * 0.2) + 's;'; w.appendChild(s); }
+    log.appendChild(w); log.scrollTop = log.scrollHeight;
+    return w;
+  }
+
+  translations() {
+    return {
+      es: {
+        nav_home: 'Inicio', nav_about: 'Nosotros', nav_menu: 'Carta', nav_cocktails: 'Experiencia', nav_reserve: 'Reservas', nav_assistant: 'Asistente', nav_follow: 'S\u00edguenos',
+        exp_kicker: 'La experiencia Bianco', exp_title: 'Donde todo<br>cobra sentido', exp_sub: 'Desliza para ver c\u00f3mo se compone una velada en Bianco: fresco, a mano y con el mar de fondo.', exp_s1t: 'Fresco de la isla', exp_s1d: 'Fruta madurada al sol, pescado del d\u00eda y producto italiano aut\u00e9ntico, elegidos cada ma\u00f1ana.', exp_s2t: 'Hecho a mano', exp_s2d: 'Cada plato y cada copa se elabora al momento, con paciencia y un punto de teatro italiano.', exp_s3t: 'Servido con el atardecer', exp_s3d: 'Las mesas se ti\u00f1en de oro mientras la luz del Atl\u00e1ntico inunda la Avenida de las Playas.', exp_s4t: 'Una velada para recordar', exp_s4d: 'Blanco, dorado y el sonido del mar: el inconfundible sello Bianco.',
+        hero_loc: 'Primera l\u00ednea de playa \u00b7 Puerto del Carmen, Lanzarote', hero_sub: 'Ristorante & Lounge', hero_scroll: 'Descubre',
+        about_kicker: 'Nuestra esencia', about_title: 'Cocina italiana,<br><em style="font-style:italic; color:#b8975a;">frente al Atl\u00e1ntico</em>',
+        about_p1: 'Nacido de la pasión por la auténtica hospitalidad italiana, Bianco fue creado para ser un refugio luminoso y acogedor en la bulliciosa costa de Puerto del Carmen. Situado en primera línea de la Avenida de las Playas, nuestro lounge restaurant combina la calidez de la cultura italiana con el alma volcánica y la luz radiante de Lanzarote. Creemos que la buena comida sabe mejor cuando se acompaña de un entorno extraordinario. Por eso diseñamos Bianco como un festín para todos los sentidos: desde la elegante estética blanca y dorada y los detalles de mármol de lujo, hasta la brisa fresca del mar que recorre nuestro espacio abierto y lleno de vegetación. Nuestro equipo se dedica a traerte la verdadera esencia de Italia, seleccionando los mejores ingredientes para crear platos que reconfortan el alma y deleitan el paladar. Desde nuestra cocina hasta tu mesa, cada detalle se cuida con amor. Ven por las vistas, quédate por los sabores y forma parte de la familia Bianco.',
+        about_p2: 'Del desayuno ba\u00f1ado de sol al c\u00f3ctel de medianoche, vivimos la hospitalidad como un arte.',
+        quote_text: '\u00abEl lujo de comer frente al oc\u00e9ano, donde el tiempo se detiene.\u00bb',
+        menu_kicker: 'La Carta', menu_title: 'Sabores de autor', menu_cta: 'Ver carta completa', menu_download: 'Descargar carta (PDF)',
+        d1_desc: 'Masa madre, mozzarella fior di latte, salami picante y r\u00facula fresca.',
+        d2_desc: 'Lomo de salm\u00f3n a la brasa, papa canaria, verduras de temporada y salsa verde.',
+        d3_desc: 'Entrecot de ternera madurada, patatas artesanas y ensalada de la huerta.',
+        d4_desc: 'Anillas de calamar en tempura ligera, brotes y alioli de hierbas.',
+        d5_desc: 'Pasta fresca, tomate San Marzano, guindilla y crujiente de parmesano.',
+        d6_desc: 'Arroz carnaroli, trufa negra, parmesano curado y r\u00facula.',
+        carta_note: 'Opciones veganas, vegetarianas y sin gluten bajo petici\u00f3n \u00b7 Descarga el PDF completo arriba',
+        cocktail_kicker: 'El Bar', cocktail_title: 'C\u00f3cteles de autor', cocktail_sub: 'Hechos a mano, fotograma a fotograma: despl\u00e1zate para ver c\u00f3mo nace el nuestro.',
+        cocktail_cap1a: 'Hechos a mano', cocktail_cap1b: 'Fruta fresca, ritual pausado', cocktail_cap2a: 'Bebe el atardecer', cocktail_cap2b: 'Nuestro frozen de fresa', cocktail_scroll: 'Desliza',
+        reviews_kicker: 'Lo que dicen', reviews_title: 'Querido en Google y Tripadvisor', reviews_rating: '4,3 \u00b7 Google y Tripadvisor',
+        ai_kicker: 'Novedad \u00b7 Inteligencia artificial', ai_title: 'Tu <em style="font-style:italic; color:#b8975a;">concierge</em> digital',
+        ai_p: 'Pregunta lo que quieras: al\u00e9rgenos, recomendaciones del chef, horarios, opciones veganas, maridajes o c\u00f3mo llegar. Nuestro asistente responde al instante, en tu idioma.',
+        ai_chip1: '\u00bfTienen platos sin gluten?', ai_chip2: '\u00bfQu\u00e9 vino marida con el salm\u00f3n?', ai_chip3: 'Horario de hoy',
+        ai_greeting: 'Bienvenido a Bianco. Soy tu concierge: preg\u00fantame por la carta, al\u00e9rgenos, horarios o reservas, en cualquier idioma.',
+        ai_placeholder: 'Escribe tu pregunta\u2026', ai_online: 'En l\u00ednea \u00b7 responde en segundos',
+        reserve_kicker: 'Reservas', reserve_title: 'Reserva tu mesa<br><em style="font-style:italic; color:#d8c08a;">junto al mar</em>',
+        reserve_addr1: 'Avenida de las Playas 33 \u00b7 CC Arena Dorada', reserve_addr2: 'Puerto del Carmen, T\u00edas \u00b7 Lanzarote',
+        reserve_cta: 'Llamar para reservar', reserve_whatsapp: 'WhatsApp', reserve_hours: 'Lun\u2013Dom \u00b7 09:00 \u2013 00:00',
+        footer_tagline: 'Ristorante & Lounge \u00b7 Puerto del Carmen, Lanzarote', footer_follow: 'S\u00edguenos', footer_rights: '\u00a9 2026 Bianco Ristorante \u00b7 Todos los derechos reservados'
+      ,
+        exp_kicker: 'La Experiencia Bianco', exp_title: 'Frente al Atlántico, en el corazón de Lanzarote', exp_scroll: 'Desliza', exp_loc_label: 'Ubicación', exp_loc_city: 'Puerto del Carmen · Lanzarote', exp_loc_addr: 'Av. de las Playas 33 · CC Arena Dorada · Primera línea de playa', exp_hrs_label: 'Horario', exp_hrs_days: 'Todos los días', exp_hrs_time: '10:00 – 00:00', exp_hrs_meals: 'Desayuno · Almuerzo · Cena · Cócteles', exp_rat_label: 'Valoración', exp_rat_text: 'Más de 600 reseñas en Google y Tripadvisor · ★★★★', exp_ess_label: 'Nuestra esencia', exp_ess_title: 'Cocina italiana frente al mar', exp_ess_desc: 'Lounge restaurant blanco y dorado donde la pasión italiana se une a la luz de Lanzarote.', exp_amb_label: 'Ambiente', exp_amb_title: 'Terraza e interior frente al mar', exp_amb_desc: 'Mesas de mármol, vegetación colgante y el Atlántico a unos pasos. Un refugio elegante.', exp_cui_label: 'Cocina', exp_cui_title: 'Italiana · Mediterránea', exp_cui_desc: 'Opciones veganas, vegetarianas y sin gluten disponibles. Ingredientes frescos, elegidos cada mañana.', exp_res_label: 'Reservas', exp_res_title: 'Reserva tu mesa junto al mar', exp_res_btn: 'Reservar ahora', exp_soc_label: 'Síguenos', exp_soc_desc: 'Instagram · Facebook · Comparte tu experiencia con nosotros', exp_quote: '"El lujo de cenar frente al océano, donde el tiempo se detiene."', about_kicker: 'Nuestra esencia', about_title: 'Nuestra <em style="font-style:italic; color:#b8975a;">Esencia</em>', reserve_kicker: 'Reservas', reserve_title: 'Reserva tu mesa<br><em style="font-style:italic; color:#d8c08a;">junto al mar</em>', reserve_hours_label: 'Horario', reserve_hours: 'Lun–Dom · 10:00 – 00:00', reserve_rating_label: 'Valoración', reserve_rating_val: '★ 4.3 Google', reserve_rating_sub: '+600 reseñas', reserve_cuisine_label: 'Cocina', reserve_cuisine_val: 'Italiana · Mediterránea · ', reserve_cuisine_opts: 'Opciones veganas y sin gluten disponibles', reserve_contact: 'Contacta con nosotros', reserve_ready: '¿Listo para reservar?', reserve_or: 'o déjanos tu mensaje', reserve_ph_name: 'Tu nombre', reserve_ph_details: 'Fecha · Hora · Número de personas', reserve_ph_msg: 'Mensaje o petición especial…', reserve_send: 'Enviar por WhatsApp'
+      , about_reviews: 'Reseñas'},
+      fr: {
+        nav_home: 'Accueil', nav_about: '\u00c0 propos', nav_menu: 'Carte', nav_cocktails: 'Exp\u00e9rience', nav_reserve: 'R\u00e9server', nav_assistant: 'Assistant', nav_follow: 'Suivez-nous',
+        exp_kicker: 'L\u2019exp\u00e9rience Bianco', exp_title: 'L\u00e0 o\u00f9 tout<br>prend forme', exp_sub: 'Faites d\u00e9filer pour voir comment se compose une soir\u00e9e \u00e0 Bianco : frais, fait main, face \u00e0 la mer.', exp_s1t: 'Frais de l\u2019\u00eele', exp_s1d: 'Fruits m\u00fbris au soleil, p\u00eache du jour et produits italiens authentiques, choisis chaque matin.', exp_s2t: 'Fait main', exp_s2d: 'Chaque plat et chaque verre est compos\u00e9 \u00e0 la minute, avec patience et une touche de th\u00e9\u00e2tre italien.', exp_s3t: 'Servi avec le coucher de soleil', exp_s3d: 'Les tables se parent d\u2019or tandis que la lumi\u00e8re de l\u2019Atlantique inonde l\u2019Avenida de las Playas.', exp_s4t: 'Une soir\u00e9e m\u00e9morable', exp_s4d: 'Blanc, or et le bruit de la mer : la signature Bianco, inimitable.',
+        hero_loc: 'En bord de mer \u00b7 Puerto del Carmen, Lanzarote', hero_sub: 'Ristorante & Lounge', hero_scroll: 'D\u00e9couvrir',
+        about_kicker: 'Notre essence', about_title: 'Cuisine italienne,<br><em style="font-style:italic; color:#b8975a;">face \u00e0 l\u2019Atlantique</em>',
+        about_p1: 'Né de la passion pour l\'hospitalité italienne authentique, Bianco a été créé pour être un havre lumineux et accueillant sur le littoral animé de Puerto del Carmen. Situé en première ligne de l\'Avenida de las Playas, notre lounge restaurant marie la chaleur de la culture italienne avec l\'âme volcanique et la lumière éclatante de Lanzarote. Nous croyons que la bonne cuisine est encore meilleure dans un environnement extraordinaire. C\'est pourquoi nous avons conçu Bianco comme un festin pour tous les sens — depuis l\'élégante esthétique blanc et or et les touches de marbre luxueux, jusqu\'à la douce brise marine qui traverse notre espace ouvert et verdoyant. Notre équipe se consacre à vous apporter la véritable essence de l\'Italie, en sélectionnant les meilleurs ingrédients pour créer des plats qui réconfortent l\'âme et ravissent le palais. De notre cuisine à votre table, chaque détail est soigné avec amour. Venez pour la vue, restez pour les saveurs et rejoignez la famille Bianco.',        about_p2: 'Du petit-d\u00e9jeuner ensoleill\u00e9 au cocktail de minuit, nous vivons l\u2019hospitalit\u00e9 comme un art.',
+        quote_text: '\u00ab Le luxe de d\u00eener face \u00e0 l\u2019oc\u00e9an, l\u00e0 o\u00f9 le temps s\u2019arr\u00eate. \u00bb',
+        menu_kicker: 'La Carte', menu_title: 'Saveurs signature', menu_cta: 'Voir la carte compl\u00e8te', menu_download: 'T\u00e9l\u00e9charger la carte (PDF)',
+        d1_desc: 'P\u00e2te au levain, mozzarella fior di latte, salami piquant et roquette fra\u00eeche.',
+        d2_desc: 'Filet de saumon grill\u00e9, pomme de terre des Canaries, l\u00e9gumes de saison et salsa verde.',
+        d3_desc: 'Entrec\u00f4te de b\u0153uf matur\u00e9, frites artisanales et salade du jardin.',
+        d4_desc: 'Anneaux de calamar en tempura l\u00e9g\u00e8re, pousses et a\u00efoli aux herbes.',
+        d5_desc: 'P\u00e2tes fra\u00eeches, tomate San Marzano, piment et parmesan croustillant.',
+        d6_desc: 'Riz carnaroli, truffe noire, parmesan affin\u00e9 et roquette.',
+        carta_note: 'Options v\u00e9ganes, v\u00e9g\u00e9tariennes et sans gluten sur demande \u00b7 T\u00e9l\u00e9chargez le PDF complet ci-dessus',
+        cocktail_kicker: 'Le Bar', cocktail_title: 'Cocktails signature', cocktail_sub: 'Faits main, image par image \u2014 faites d\u00e9filer pour voir na\u00eetre le n\u00f4tre.',
+        cocktail_cap1a: 'Faits main', cocktail_cap1b: 'Fruits frais, rituel lent', cocktail_cap2a: 'Buvez le coucher de soleil', cocktail_cap2b: 'Notre frozen \u00e0 la fraise', cocktail_scroll: 'D\u00e9filer',
+        reviews_kicker: 'Ils en parlent', reviews_title: 'Pl\u00e9biscit\u00e9 sur Google & Tripadvisor', reviews_rating: '4,3 \u00b7 Google & Tripadvisor',
+        ai_kicker: 'Nouveau \u00b7 Intelligence artificielle', ai_title: 'Votre <em style="font-style:italic; color:#b8975a;">concierge</em> digital',
+        ai_p: 'Demandez tout : allerg\u00e8nes, recommandations du chef, horaires, options v\u00e9ganes, accords mets-vins ou comment nous trouver. Notre assistant r\u00e9pond instantan\u00e9ment, dans votre langue.',
+        ai_chip1: 'Avez-vous des plats sans gluten ?', ai_chip2: 'Quel vin avec le saumon ?', ai_chip3: 'Horaires d\u2019aujourd\u2019hui',
+        ai_greeting: 'Bienvenue chez Bianco. Je suis votre concierge : posez-moi vos questions sur la carte, les allerg\u00e8nes, les horaires ou les r\u00e9servations, dans toutes les langues.',
+        ai_placeholder: '\u00c9crivez votre question\u2026', ai_online: 'En ligne \u00b7 r\u00e9pond en quelques secondes',
+        reserve_kicker: 'R\u00e9servations', reserve_title: 'R\u00e9servez votre table<br><em style="font-style:italic; color:#d8c08a;">face \u00e0 la mer</em>',
+        reserve_addr1: 'Avenida de las Playas 33 \u00b7 CC Arena Dorada', reserve_addr2: 'Puerto del Carmen, T\u00edas \u00b7 Lanzarote',
+        reserve_cta: 'Appeler pour r\u00e9server', reserve_whatsapp: 'WhatsApp', reserve_hours: 'Lun\u2013Dim \u00b7 09:00 \u2013 00:00',
+        footer_tagline: 'Ristorante & Lounge \u00b7 Puerto del Carmen, Lanzarote', footer_follow: 'Suivez-nous', footer_rights: '\u00a9 2026 Bianco Ristorante \u00b7 Tous droits r\u00e9serv\u00e9s'
+      ,
+        exp_kicker: "L'expérience Bianco", exp_title: 'Face à l\'Atlantique, au cœur de Lanzarote', exp_scroll: 'Défiler', exp_loc_label: 'Localisation', exp_loc_city: 'Puerto del Carmen · Lanzarote', exp_loc_addr: 'Av. de las Playas 33 · CC Arena Dorada · En bord de mer', exp_hrs_label: 'Horaires', exp_hrs_days: 'Tous les jours', exp_hrs_time: '10:00 – 00:00', exp_hrs_meals: 'Petit-déjeuner · Déjeuner · Dîner · Cocktails', exp_rat_label: 'Note', exp_rat_text: 'Plus de 600 avis sur Google et Tripadvisor · ★★★★', exp_ess_label: 'Notre essence', exp_ess_title: 'Cuisine italienne face à la mer', exp_ess_desc: 'Lounge restaurant blanc et or où la passion italienne rencontre la lumière de Lanzarote.', exp_amb_label: 'Atmosphère', exp_amb_title: 'Terrasse & intérieur face à la mer', exp_amb_desc: 'Tables en marbre, verdure suspendue et l\'Atlantique à quelques pas. Un refuge élégant.', exp_cui_label: 'Cuisine', exp_cui_title: 'Italienne · Méditerranéenne', exp_cui_desc: 'Options véganes, végétariennes et sans gluten disponibles. Ingrédients frais, choisis chaque matin.', exp_res_label: 'Réservations', exp_res_title: 'Réservez votre table face à la mer', exp_res_btn: 'Réserver', exp_soc_label: 'Suivez-nous', exp_soc_desc: 'Instagram · Facebook · Partagez votre expérience avec nous', exp_quote: '"Le luxe de dîner face à l\'océan, là où le temps s\'arrête."', about_kicker: 'Notre essence', about_title: 'Notre <em style="font-style:italic; color:#b8975a;">Essence</em>', reserve_kicker: 'Réservations', reserve_title: 'Réservez votre table<br><em style="font-style:italic; color:#d8c08a;">face à la mer</em>', reserve_hours_label: 'Horaires', reserve_hours: 'Lun–Dim · 10:00 – 00:00', reserve_rating_label: 'Note', reserve_rating_val: '★ 4.3 Google', reserve_rating_sub: '+600 avis', reserve_cuisine_label: 'Cuisine', reserve_cuisine_val: 'Italienne · Méditerranéenne · ', reserve_cuisine_opts: 'Options véganes et sans gluten disponibles', reserve_contact: 'Contactez-nous', reserve_ready: 'Prêt à réserver?', reserve_or: 'ou laissez-nous un message', reserve_ph_name: 'Votre nom', reserve_ph_details: 'Date · Heure · Nombre de personnes', reserve_ph_msg: 'Message ou demande spéciale…', reserve_send: 'Envoyer via WhatsApp'
+      , about_reviews: 'Avis'},
+      de: {
+        nav_home: 'Start', nav_about: '\u00dcber uns', nav_menu: 'Karte', nav_cocktails: 'Erlebnis', nav_reserve: 'Reservieren', nav_assistant: 'Assistent', nav_follow: 'Folgen Sie uns',
+        exp_kicker: 'Das Bianco-Erlebnis', exp_title: 'Wo alles<br>zusammenkommt', exp_sub: 'Scrolle und sieh, wie ein Abend im Bianco entsteht \u2014 frisch, von Hand, mit Blick aufs Meer.', exp_s1t: 'Frisch von der Insel', exp_s1d: 'Sonnengereifte Fr\u00fcchte, der Fang des Tages und echte italienische Produkte \u2014 jeden Morgen ausgew\u00e4hlt.', exp_s2t: 'Von Hand gemacht', exp_s2d: 'Jeder Teller und jedes Glas wird frisch zubereitet \u2014 mit Geduld und etwas italienischem Theater.', exp_s3t: 'Serviert mit dem Sonnenuntergang', exp_s3d: 'Die Tische schimmern golden, w\u00e4hrend das Atlantiklicht \u00fcber die Avenida de las Playas flutet.', exp_s4t: 'Ein Abend, den man nicht vergisst', exp_s4d: 'Wei\u00df, Gold und das Rauschen des Meeres \u2014 die unverkennbare Bianco-Signatur.',
+        hero_loc: 'Direkt am Strand \u00b7 Puerto del Carmen, Lanzarote', hero_sub: 'Ristorante & Lounge', hero_scroll: 'Entdecken',
+        about_kicker: 'Unsere Essenz', about_title: 'Italienische K\u00fcche,<br><em style="font-style:italic; color:#b8975a;">mit Blick auf den Atlantik</em>',
+        about_p1: 'Aus der Leidenschaft für authentische italienische Gastfreundschaft geboren, wurde Bianco als helles, einladendes Refugium an der lebhaften Küste von Puerto del Carmen geschaffen. Direkt an der Avenida de las Playas gelegen, verbindet unser Lounge-Restaurant die Wärme der italienischen Kultur mit der vulkanischen Seele und dem strahlenden Licht Lanzarotes. Wir glauben, dass gutes Essen am besten in einem außergewöhnlichen Umfeld schmeckt. Deshalb haben wir Bianco als Fest für alle Sinne gestaltet – von der eleganten weiß-goldenen Ästhetik und den luxuriösen Marmorelementen bis zur frischen Meeresbrise, die durch unseren offenen, begrünten Raum weht. Unser Team widmet sich mit Hingabe der wahren Essenz Italiens und wählt die feinsten Zutaten aus, um Gerichte zu kreieren, die die Seele wärmen und den Gaumen erfreuen. Von unserer Küche zu Ihrem Tisch wird jedes Detail mit Liebe behandelt. Kommen Sie für die Aussicht, bleiben Sie für die Aromen und werden Sie Teil der Bianco-Familie.',
+        about_p2: 'Vom sonnigen Fr\u00fchst\u00fcck bis zum Mitternachtscocktail leben wir Gastfreundschaft als Kunst.',
+        quote_text: '\u201eDer Luxus, mit Blick aufs Meer zu speisen, wo die Zeit stillsteht.\u201c',
+        menu_kicker: 'Die Karte', menu_title: 'Signature-Gerichte', menu_cta: 'Ganze Karte ansehen', menu_download: 'Karte herunterladen (PDF)',
+        d1_desc: 'Sauerteigboden, Fior-di-Latte-Mozzarella, scharfe Salami und frischer Rucola.',
+        d2_desc: 'Gegrilltes Lachsfilet, kanarische Kartoffeln, Saisongem\u00fcse und Salsa Verde.',
+        d3_desc: 'Gereiftes Rinder-Entrec\u00f4te, hausgemachte Pommes und Gartensalat.',
+        d4_desc: 'Tintenfischringe in leichtem Teig, Sprossen und Kr\u00e4uter-Aioli.',
+        d5_desc: 'Frische Pasta, San-Marzano-Tomate, Chili und knuspriger Parmesan.',
+        d6_desc: 'Carnaroli-Reis, schwarzer Tr\u00fcffel, gereifter Parmesan und Rucola.',
+        carta_note: 'Vegane, vegetarische & glutenfreie Optionen auf Anfrage \u00b7 Vollst\u00e4ndiges PDF oben herunterladen',
+        cocktail_kicker: 'Die Bar', cocktail_title: 'Signature-Cocktails', cocktail_sub: 'Von Hand gemacht, Bild f\u00fcr Bild \u2013 scrolle und sieh, wie unserer entsteht.',
+        cocktail_cap1a: 'Von Hand gemacht', cocktail_cap1b: 'Frische Fr\u00fcchte, langsames Ritual', cocktail_cap2a: 'Trink den Sonnenuntergang', cocktail_cap2b: 'Unser Frozen Strawberry', cocktail_scroll: 'Scrollen',
+        reviews_kicker: 'Das sagen G\u00e4ste', reviews_title: 'Beliebt auf Google & Tripadvisor', reviews_rating: '4,3 \u00b7 Google & Tripadvisor',
+        ai_kicker: 'Neu \u00b7 K\u00fcnstliche Intelligenz', ai_title: 'Ihr digitaler <em style="font-style:italic; color:#b8975a;">Concierge</em>',
+        ai_p: 'Fragen Sie alles: Allergene, Empfehlungen des K\u00fcchenchefs, \u00d6ffnungszeiten, vegane Optionen, Weinbegleitung oder den Weg zu uns. Unser Assistent antwortet sofort, in Ihrer Sprache.',
+        ai_chip1: 'Gibt es glutenfreie Gerichte?', ai_chip2: 'Welcher Wein passt zum Lachs?', ai_chip3: '\u00d6ffnungszeiten heute',
+        ai_greeting: 'Willkommen im Bianco. Ich bin Ihr Concierge \u2013 fragen Sie mich zur Karte, zu Allergenen, \u00d6ffnungszeiten oder Reservierungen, in jeder Sprache.',
+        ai_placeholder: 'Schreiben Sie Ihre Frage\u2026', ai_online: 'Online \u00b7 antwortet in Sekunden',
+        reserve_kicker: 'Reservierungen', reserve_title: 'Reservieren Sie Ihren Tisch<br><em style="font-style:italic; color:#d8c08a;">am Meer</em>',
+        reserve_addr1: 'Avenida de las Playas 33 \u00b7 CC Arena Dorada', reserve_addr2: 'Puerto del Carmen, T\u00edas \u00b7 Lanzarote',
+        reserve_cta: 'Zum Reservieren anrufen', reserve_whatsapp: 'WhatsApp', reserve_hours: 'Mo\u2013So \u00b7 09:00 \u2013 00:00',
+        footer_tagline: 'Ristorante & Lounge \u00b7 Puerto del Carmen, Lanzarote', footer_follow: 'Folgen Sie uns', footer_rights: '\u00a9 2026 Bianco Ristorante \u00b7 Alle Rechte vorbehalten'
+      ,
+        exp_kicker: 'Das Bianco-Erlebnis', exp_title: 'Mit Blick auf den Atlantik, im Herzen von Lanzarote', exp_scroll: 'Scrollen', exp_loc_label: 'Lage', exp_loc_city: 'Puerto del Carmen · Lanzarote', exp_loc_addr: 'Av. de las Playas 33 · CC Arena Dorada · Direkt am Strand', exp_hrs_label: 'Öffnungszeiten', exp_hrs_days: 'Täglich', exp_hrs_time: '10:00 – 00:00', exp_hrs_meals: 'Frühstück · Mittagessen · Abendessen · Cocktails', exp_rat_label: 'Bewertung', exp_rat_text: 'Über 600 Bewertungen bei Google und Tripadvisor · ★★★★', exp_ess_label: 'Unser Konzept', exp_ess_title: 'Italienische Küche am Meer', exp_ess_desc: 'Weiß-goldenes Lounge-Restaurant, wo italienische Leidenschaft auf das Licht Lanzarotes trifft.', exp_amb_label: 'Atmosphäre', exp_amb_title: 'Terrasse & Innenbereich am Meer', exp_amb_desc: 'Marmortische, hängendes Grün und der Atlantik nur wenige Schritte entfernt. Ein eleganter Rückzugsort.', exp_cui_label: 'Küche', exp_cui_title: 'Italienisch · Mediterran', exp_cui_desc: 'Vegane, vegetarische und glutenfreie Optionen verfügbar. Frische Zutaten, täglich ausgewählt.', exp_res_label: 'Reservierungen', exp_res_title: 'Tisch am Meer reservieren', exp_res_btn: 'Jetzt reservieren', exp_soc_label: 'Folgen Sie uns', exp_soc_desc: 'Instagram · Facebook · Teilen Sie Ihr Erlebnis mit uns', exp_quote: '"Der Luxus, mit Blick aufs Meer zu speisen, wo die Zeit still steht."', about_kicker: 'Unser Konzept', about_title: 'Unser <em style="font-style:italic; color:#b8975a;">Konzept</em>', reserve_kicker: 'Reservierungen', reserve_title: 'Tisch am Meer<br><em style="font-style:italic; color:#d8c08a;">reservieren</em>', reserve_hours_label: 'Öffnungszeiten', reserve_hours: 'Mo–So · 10:00 – 00:00', reserve_rating_label: 'Bewertung', reserve_rating_val: '★ 4.3 Google', reserve_rating_sub: '+600 Bewertungen', reserve_cuisine_label: 'Küche', reserve_cuisine_val: 'Italienisch · Mediterran · ', reserve_cuisine_opts: 'Vegane und glutenfreie Optionen verfügbar', reserve_contact: 'Kontaktieren Sie uns', reserve_ready: 'Bereit zu reservieren?', reserve_or: 'oder hinterlassen Sie uns eine Nachricht', reserve_ph_name: 'Ihr Name', reserve_ph_details: 'Datum · Uhrzeit · Personenanzahl', reserve_ph_msg: 'Nachricht oder besonderer Wunsch…', reserve_send: 'Via WhatsApp senden'
+      , about_reviews: 'Bewertungen'}
+    };
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._cio) this._cio.disconnect();
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+  }
+
+  renderVals() {
+    const dishes = [
+      { name: 'Pizza Diavola', img: 'assets/dish-pizza.jpg' },
+      { name: 'Salmone alla Griglia', img: 'assets/dish-salmon.jpg' },
+      { name: 'Calamari Fritti', img: 'assets/dish-calamari.jpg' },
+      { name: 'Tagliata di Manzo', img: 'assets/dish-entrecot.jpg' },
+      { name: "Penne all'Arrabbiata", img: 'assets/dish-penne.jpg' },
+      { name: 'Risotto al Tartufo', img: 'assets/dish-risotto.jpg' },
+      { name: 'Bruschetta', img: 'assets/dish-tartufo.jpg' },
+      { name: 'Tagliata di Verdure', img: 'assets/dish-meat.jpg' }
+    ];
+    const reviews = [
+      { quote: '\u201cWe came for breakfast and dinner, fantastic every time. Lovely staff and the sea view is the perfect finishing touch.\u201d', name: 'Sarah M.', initial: 'S', source: 'Tripadvisor' },
+      { quote: '\u201cThe truffle risotto is spectacular and the white, sea-facing setting is on another level. We will be back.\u201d', name: 'Marco R.', initial: 'M', source: 'Google' },
+      { quote: '\u201cService impeccable et cadre magnifique face \u00e0 la plage. Une adresse \u00e0 recommander \u00e0 Puerto del Carmen.\u201d', name: 'Camille D.', initial: 'C', source: 'Google' },
+      { quote: '\u201cWundersch\u00f6nes Ambiente, leckere Pizza und sehr freundliches Personal. Wir kommen wieder!\u201d', name: 'Thomas K.', initial: 'T', source: 'Tripadvisor' },
+      { quote: '\u201cThe best dinner of our holiday in Lanzarote. Beautiful gold details and luxurious service.\u201d', name: 'Luc\u00eda F.', initial: 'L', source: 'Google' },
+      { quote: '\u201cBeautiful spot for sunset cocktails. The salmon was cooked to perfection and the service was lovely.\u201d', name: 'James P.', initial: 'J', source: 'Tripadvisor' },
+      { quote: '\u201cElegant decor, pleasant music and delicious cocktails at sunset. A truly beautiful experience.\u201d', name: 'Elena G.', initial: 'E', source: 'Google' },
+      { quote: '\u201cIncredible sunset, real Italian food and a sophisticated atmosphere. We will definitely repeat.\u201d', name: 'Andrea V.', initial: 'A', source: 'Google' }
+    ];
+    return { dishesLoop: dishes.concat(dishes.slice(0, 4)), reviewsLoop: reviews.concat(reviews) };
+  }
+}
+
+
+    var comp = new Component();
+    comp.props = { heroVariant: 'classic', phone: '', igUrl: '', fbUrl: '', waUrl: '' };
+    var data = {};
+    try { data = comp.renderVals(); } catch(e) { console.error('renderVals:', e); }
+    expandLoops(data);
+    try { comp.componentDidMount(); } catch(e) { console.error('componentDidMount:', e); }
+  })();
+})();
+</script>
+
+  <!-- BIANCO AI -->
+  <div id="ai-panel" style="display:none;position:fixed;inset:0;z-index:800;background:rgba(30,24,16,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);align-items:stretch;justify-content:flex-end;" onclick="if(event.target===this)window.closeAIPanel()">
+    <div id="ai-panel-box" style="width:min(100vw,480px);height:100vh;background:#faf8f3;display:flex;flex-direction:column;box-shadow:-24px 0 80px rgba(30,24,16,.25);transform:translateX(100%);transition:transform .4s cubic-bezier(.16,1,.3,1);">
+      <div style="padding:20px 24px 16px;background:linear-gradient(135deg,#2c281f,#403828);display:flex;align-items:center;gap:14px;flex:none;">
+        <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#d8c08a,#b8975a);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:20px;flex:none;">B</div>
+        <div style="flex:1;">
+          <div style="color:#fff;font-size:15px;font-family:'Cormorant Garamond',serif;">Bianco Concierge</div>
+          <div style="color:#a89b7f;font-size:11px;letter-spacing:1px;text-transform:uppercase;margin-top:2px;">Asistente IA · Siempre disponible</div>
+        </div>
+        <button onclick="window.closeAIPanel()" style="background:none;border:none;color:#a89b7f;font-size:24px;cursor:pointer;padding:4px 8px;line-height:1;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#a89b7f'">&times;</button>
+      </div>
+      <div style="padding:14px 20px;display:flex;flex-wrap:wrap;gap:8px;flex:none;border-bottom:1px solid rgba(184,151,90,.12);">
+        <button class="ai-chip" style="padding:7px 15px;border:1px solid rgba(184,151,90,.4);border-radius:50px;background:transparent;color:#6a6353;font-size:12px;cursor:pointer;" onmouseover="this.style.background='rgba(184,151,90,.1)'" onmouseout="this.style.background='transparent'">¿Cuál es el horario?</button>
+        <button class="ai-chip" style="padding:7px 15px;border:1px solid rgba(184,151,90,.4);border-radius:50px;background:transparent;color:#6a6353;font-size:12px;cursor:pointer;" onmouseover="this.style.background='rgba(184,151,90,.1)'" onmouseout="this.style.background='transparent'">Quiero reservar una mesa</button>
+        <button class="ai-chip" style="padding:7px 15px;border:1px solid rgba(184,151,90,.4);border-radius:50px;background:transparent;color:#6a6353;font-size:12px;cursor:pointer;" onmouseover="this.style.background='rgba(184,151,90,.1)'" onmouseout="this.style.background='transparent'">¿Qué platos recomendáis?</button>
+        <button class="ai-chip" style="padding:7px 15px;border:1px solid rgba(184,151,90,.4);border-radius:50px;background:transparent;color:#6a6353;font-size:12px;cursor:pointer;" onmouseover="this.style.background='rgba(184,151,90,.1)'" onmouseout="this.style.background='transparent'">¿Tenéis opciones veganas?</button>
+      </div>
+      <div id="ai-panel-log" style="flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:12px;scroll-behavior:smooth;"></div>
+      <div style="padding:14px 16px;border-top:1px solid rgba(184,151,90,.15);display:flex;gap:10px;flex:none;background:#fff;">
+        <input id="ai-panel-input" type="text" placeholder="Escribe tu pregunta..." autocomplete="off" style="flex:1;border:1.5px solid rgba(184,151,90,.25);border-radius:50px;padding:10px 18px;font-size:13px;color:#3a352b;outline:none;font-family:inherit;background:#faf8f3;" onfocus="this.style.borderColor='#b8975a'" onblur="this.style.borderColor='rgba(184,151,90,.25)'">
+        <button id="ai-panel-send" style="width:42px;height:42px;border-radius:50%;background:#b8975a;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex:none;" onmouseover="this.style.background='#c9a86a'" onmouseout="this.style.background='#b8975a'">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <a href="tel:+34928339337" aria-label="Llamar para reservar" style="position:fixed;bottom:28px;left:28px;z-index:700;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#d8c08a,#b8975a);box-shadow:0 8px 28px rgba(184,151,90,.5);display:flex;align-items:center;justify-content:center;text-decoration:none;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 12px 36px rgba(184,151,90,.7)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 8px 28px rgba(184,151,90,.5)'">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.54 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  </a>
+
+  <button id="ai-float-btn" aria-label="Abrir asistente" style="position:fixed;bottom:28px;right:28px;z-index:700;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#d8c08a,#b8975a);border:none;cursor:pointer;box-shadow:0 8px 28px rgba(80,70,50,.4);display:flex;align-items:center;justify-content:center;animation:pulsechat 2.8s ease-in-out infinite;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="window.openAIPanel()">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+  <script>
+  (function(){
+    var OPENAI_KEY = 'YOUR_OPENAI_KEY';
+    var SYSTEM = "Eres el concierge digital de Bianco Ristorante, restaurante italiano frente al mar en Av. de las Playas 33, Puerto del Carmen, Lanzarote. Abierto todos los dias 10:00-00:00. Estilo calido y elegante, respuestas 2-4 frases. Responde SIEMPRE en el idioma del cliente.";
+    var history = [], busy = false;
+    window.openAIPanel = function() {
+      var p = document.getElementById('ai-panel'), b = document.getElementById('ai-panel-box');
+      p.style.display = 'flex';
+      setTimeout(function() { b.style.transform = 'translateX(0)'; }, 10);
+      var l = document.getElementById('ai-panel-log');
+      if (l && l.children.length === 0) addMsg('bot', 'Buenas! Soy el concierge de Bianco. En que puedo ayudarte?', 'ai-panel-log');
+    };
+    window.closeAIPanel = function() {
+      var b = document.getElementById('ai-panel-box');
+      b.style.transform = 'translateX(100%)';
+      setTimeout(function() { document.getElementById('ai-panel').style.display = 'none'; }, 400);
+    };
+    function addMsg(role, text, logId) {
+      var l = document.getElementById(logId || 'ai-panel-log');
+      if (!l) return;
+      var d = document.createElement('div');
+      d.style.cssText = role === 'user'
+        ? 'align-self:flex-end;max-width:82%;background:#b8975a;color:#fff;padding:10px 16px;border-radius:18px 18px 4px 18px;font-size:13px;line-height:1.55;word-break:break-word;'
+        : 'align-self:flex-start;max-width:88%;background:#fff;color:#3a352b;padding:12px 16px;border-radius:18px 18px 18px 4px;font-size:13px;line-height:1.6;box-shadow:0 2px 8px rgba(80,70,50,.07);word-break:break-word;';
+      d.textContent = text;
+      l.appendChild(d);
+      l.scrollTop = l.scrollHeight;
+    }
+    function addTyping(logId) {
+      var l = document.getElementById(logId || 'ai-panel-log');
+      if (!l) return null;
+      var d = document.createElement('div');
+      d.style.cssText = 'align-self:flex-start;background:#fff;padding:12px 16px;border-radius:18px 18px 18px 4px;box-shadow:0 2px 8px rgba(80,70,50,.07);display:flex;gap:5px;align-items:center;';
+      for (var i = 0; i < 3; i++) {
+        var dot = document.createElement('div');
+        dot.style.cssText = 'width:6px;height:6px;border-radius:50%;background:#b8975a;animation:pulsechat 1s ease-in-out infinite;animation-delay:' + (i * 0.2) + 's;';
+        d.appendChild(dot);
+      }
+      l.appendChild(d);
+      l.scrollTop = l.scrollHeight;
+      return d;
+    }
+    async function sendMsg(text, logId) {
+      text = (text || '').trim();
+      if (!text || busy) return;
+      busy = true;
+      var inp = document.getElementById('ai-panel-input');
+      if (inp) inp.value = '';
+      addMsg('user', text, logId);
+      var t = addTyping(logId);
+      try {
+        var reply = '';
+        if (OPENAI_KEY && OPENAI_KEY !== 'YOUR_OPENAI_KEY') {
+          var msgs = [{role:'system',content:SYSTEM}].concat(history.slice(-12)).concat([{role:'user',content:text}]);
+          var res = await fetch('https://api.openai.com/v1/chat/completions', {
+            method: 'POST',
+            headers: {'Authorization': 'Bearer ' + OPENAI_KEY, 'Content-Type': 'application/json'},
+            body: JSON.stringify({model: 'gpt-4o-mini', max_tokens: 320, messages: msgs})
+          });
+          var data = await res.json();
+          reply = data.choices[0].message.content || '';
+          history.push({role:'user',content:text},{role:'assistant',content:reply});
+        } else {
+          await new Promise(function(r) { setTimeout(r, 800); });
+          reply = 'Gracias por tu mensaje. Para reservas llamanos al 928 33 93 37. Abrimos todos los dias de 10:00 a 00:00.';
+        }
+        if (t) t.remove();
+        addMsg('bot', reply.trim() || '', logId);
+      } catch(e) {
+        if (t) t.remove();
+        addMsg('bot', 'Para reservas llamanos al 928 33 93 37.', logId);
+      }
+      busy = false;
+    }
+    function init() {
+      var ps = document.getElementById('ai-panel-send'), pi = document.getElementById('ai-panel-input');
+      if (ps) ps.addEventListener('click', function() { sendMsg(pi && pi.value, 'ai-panel-log'); });
+      if (pi) pi.addEventListener('keydown', function(e) { if (e.key === 'Enter') sendMsg(pi.value, 'ai-panel-log'); });
+      document.querySelectorAll('.ai-chip').forEach(function(c) {
+        c.addEventListener('click', function() { if (pi) pi.value = c.textContent; sendMsg(c.textContent, 'ai-panel-log'); });
+      });
+      document.addEventListener('keydown', function(e) { if (e.key === 'Escape') window.closeAIPanel(); });
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+  })();
+  </script>
+</body>
+</html>
