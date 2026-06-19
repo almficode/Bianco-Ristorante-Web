@@ -89,7 +89,7 @@ body{background:#f4f0e8;color:#2b2118;font-family:'Cormorant Garamond',Georgia,s
   <!-- HERO -->
   <section id="top" data-screen-label="Hero" data-hero="" style="position:relative; height:100vh; min-height:700px; overflow:hidden; display:flex; align-items:center; justify-content:center; background:#e9e3d7; cursor:default;">
     <div data-hero-bg="" style="position:absolute; inset:0; will-change:transform;">
-      <div data-hero-img="" style="position:absolute; inset:-7%; background-image:url('assets/interior-lounge.jpg'); background-size:cover; background-position:center 42%; animation:kenburns 30s ease-in-out infinite alternate;"></div>
+      <div data-hero-img="" style="position:absolute; inset:-7%; background-image:url('assets/hero-nuevo.png'); background-size:cover; background-position:center 42%; animation:kenburns 30s ease-in-out infinite alternate;"></div>
     </div>
     <div data-hero-wash="" style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(247,243,236,.34) 0%, rgba(247,243,236,.12) 28%, rgba(244,240,232,.55) 68%, rgba(244,240,232,.94) 88%, #f4f0e8 100%);"></div>
 
@@ -255,9 +255,9 @@ body{background:#f4f0e8;color:#2b2118;font-family:'Cormorant Garamond',Georgia,s
       <div data-reveal="" style="opacity:0; transform:translateY(40px); transition:opacity 1.1s cubic-bezier(.16,1,.3,1), transform 1.1s cubic-bezier(.16,1,.3,1);">
         <div data-i18n="about_kicker" style="font-size:12px; letter-spacing:4px; text-transform:uppercase; color:#b8975a; margin-bottom:22px;">Our essence</div>
         <h2 data-i18n-html="about_title" style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:clamp(36px,4.5vw,56px); line-height:1.08; margin-bottom:26px;">Nuestra <em style="font-style:italic; color:#b8975a;">Esencia</em></h2>
-        <p data-i18n="about_p1" style="font-size:16px; line-height:1.9; color:#5c564a; font-weight:300; margin-bottom:20px;"> Born from a passion for authentic Italian hospitality, Bianco was created to be a bright, welcoming haven on the bustling coastline of Puerto del Carmen. Situated right on the seafront of Avenida de las Playas, our lounge restaurant combines the warmth of Italian culture with the volcanic soul and radiant light of Lanzarote.
+        <p data-i18n="about_p1" style="font-size:16px; line-height:1.9; color:#5c564a; font-weight:300; margin-bottom:20px; text-align:justify;"> Born from a passion for authentic Italian hospitality, Bianco was created to be a bright, welcoming haven on the bustling coastline of Puerto del Carmen. Situated right on the seafront of Avenida de las Playas, our lounge restaurant combines the warmth of Italian culture with the volcanic soul and radiant light of Lanzarote.
 We believe that great food tastes best when paired with an extraordinary environment. That is why we designed Bianco to be a feast for all senses—from the elegant white-and-gold aesthetics and luxury marble touchpoints to the fresh sea breeze that drifts through our open, green-filled space. Our team is dedicated to bringing you the true essence of Italy, sourcing the finest ingredients to create dishes that comfort the soul and delight the palate. From our kitchen to your table, every detail is handled with love. Come for the view, stay for the flavors, and become part of the Bianco family.</p>
-        <p data-i18n="about_p2" style="font-size:16px; line-height:1.9; color:#5c564a; font-weight:300;">From sunlit breakfasts to midnight cocktails, we treat hospitality as an art.</p>
+        <p data-i18n="about_p2" style="font-size:16px; line-height:1.9; color:#5c564a; font-weight:300; text-align:justify;">From sunlit breakfasts to midnight cocktails, we treat hospitality as an art.</p>
       </div>
       <div data-reveal="" style="opacity:0; transform:translateY(40px); transition:opacity 1.1s cubic-bezier(.16,1,.3,1) .15s, transform 1.1s cubic-bezier(.16,1,.3,1) .15s;">
         <div style="position:relative; aspect-ratio:4/5; overflow:hidden; border-radius:3px; box-shadow:0 30px 60px rgba(80,70,50,.18);">
@@ -553,7 +553,7 @@ We believe that great food tastes best when paired with an extraordinary environ
         </a>
       </div>
       <div style="flex:2;min-width:300px;min-height:420px;">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3488!2d-13.6604!3d28.9217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc461955b8f71a45%3A0x5d28cb1a7de29aad!2sBianco%20Ristorante!5e0!3m2!1ses!2ses!4v1700000000000"
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1732.4!2d-13.6608!3d28.9218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc461955b8f71a45%3A0x5d28cb1a7de29aad!2sBianco%20Ristorante!5e0!3m2!1ses!2ses!4v1750000000000!5m2!1ses!2ses"
           width="100%" height="100%" style="border:0;display:block;min-height:420px;"
           allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación Bianco Ristorante">
         </iframe>
@@ -859,13 +859,13 @@ class Component extends DCLogic {
     const wash = document.querySelector('[data-hero-wash]');
     if (!img) return;
     if (v === 'editorial') {
-      img.style.backgroundImage = "url('assets/terrace-sea.jpg')";
+      img.style.backgroundImage = "url('assets/hero-nuevo.png')";
       img.style.backgroundPosition = 'center 55%';
       if (content) content.style.justifyContent = 'flex-start';
       if (inner) { inner.style.textAlign = 'left'; inner.style.paddingLeft = '8vw'; }
       if (wash) wash.style.background = 'linear-gradient(110deg, rgba(20,18,12,.5) 0%, rgba(20,18,12,.2) 45%, rgba(244,240,232,.3) 80%, #f4f0e8 100%)';
     } else {
-      img.style.backgroundImage = "url('assets/hero-interior.jpg')";
+      img.style.backgroundImage = "url('assets/hero-nuevo.png')";
       img.style.backgroundPosition = 'center 42%';
       if (content) content.style.justifyContent = 'center';
       if (inner) { inner.style.textAlign = 'center'; inner.style.paddingLeft = '0'; }
