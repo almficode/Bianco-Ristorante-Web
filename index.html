@@ -74,26 +74,31 @@ body{background:#f4f0e8;color:#2b2118;font-family:'Cormorant Garamond',Georgia,s
   #about [style*="font-size:34px"] { font-size: 24px !important; }
 
   /* ── EXPERIENCE (canvas + hub + satellites) ── */
-  /* Hub central pill — more compact */
+  /* Hub central pill — más pequeño en móvil */
   [data-scroll-hub=""] a {
-    padding: 16px 22px !important;
-    gap: 12px !important;
-    border-radius: 60px !important;
+    padding: 11px 16px !important;
+    gap: 9px !important;
+    border-radius: 50px !important;
   }
   [data-scroll-hub=""] [style*="width:52px"] {
-    width: 36px !important; height: 36px !important;
+    width: 28px !important; height: 28px !important;
   }
-  [data-scroll-hub=""] [style*="font-size:26px"] { font-size: 18px !important; }
-  [data-scroll-hub=""] [style*="font-size:12px; letter-spacing:3.5px"] { font-size: 9px !important; letter-spacing: 2px !important; }
+  [data-scroll-hub=""] [style*="width:52px"] svg {
+    width: 14px !important; height: 14px !important;
+  }
+  [data-scroll-hub=""] [style*="font-size:26px"] { font-size: 14px !important; }
+  [data-scroll-hub=""] [style*="font-size:12px; letter-spacing:3.5px"] { font-size: 8px !important; letter-spacing: 1.5px !important; margin-bottom: 3px !important; }
 
-  /* Satellite pills — closer to hub on mobile */
-  [data-scroll-sat="top"]    { top: 33% !important; left: 50% !important; }
-  [data-scroll-sat="bottom"] { top: 67% !important; left: 50% !important; }
-  [data-scroll-sat="right"]  { top: 46% !important; left: 60% !important; }
-  [data-scroll-sat="left"]   { top: 54% !important; left: 6% !important; }
+  /* Satellite pills — más cerca del hub y más pequeñas */
+  [data-scroll-sat="top"]    { top: 34% !important; left: 50% !important; }
+  [data-scroll-sat="bottom"] { top: 66% !important; left: 50% !important; }
+  [data-scroll-sat="right"]  { top: 47% !important; left: 58% !important; }
+  [data-scroll-sat="left"]   { top: 53% !important; left: 4% !important; }
 
-  [data-scroll-sat] > div { padding: 8px 13px !important; gap: 6px !important; }
-  [data-scroll-sat] span[style*="letter-spacing"] { font-size: 9px !important; letter-spacing: 0.8px !important; }
+  [data-scroll-sat] > div { padding: 6px 10px !important; gap: 5px !important; }
+  [data-scroll-sat] > div svg { width: 9px !important; height: 9px !important; }
+  [data-scroll-sat] span[style*="letter-spacing"] { font-size: 8px !important; letter-spacing: 0.5px !important; }
+  [data-scroll-sat="right"] span[style*="font-size:13px"] { font-size: 9px !important; }
 
   /* Title in experience section */
   #experience [style*="padding:30px"] { padding: 18px 16px 12px !important; }
@@ -274,7 +279,7 @@ body{background:#f4f0e8;color:#2b2118;font-family:'Cormorant Garamond',Georgia,s
   <!-- HERO -->
   <section id="top" data-screen-label="Hero" data-hero="" style="position:relative; height:100vh; min-height:700px; overflow:hidden; display:flex; align-items:center; justify-content:center; background:#e9e3d7; cursor:default;">
     <div data-hero-bg="" style="position:absolute; inset:0; will-change:transform;">
-      <div data-hero-img="" style="position:absolute; inset:-7%; background-image:url('assets/hero-nuevo.png'); background-size:cover; background-position:center 42%; animation:kenburns 30s ease-in-out infinite alternate;"></div>
+      <div data-hero-img="" style="position:absolute; inset:-7%; background-image:url('assets/Portada.jpeg'); background-size:cover; background-position:center 42%; animation:kenburns 30s ease-in-out infinite alternate;"></div>
     </div>
     <div data-hero-wash="" style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(247,243,236,.34) 0%, rgba(247,243,236,.12) 28%, rgba(244,240,232,.55) 68%, rgba(244,240,232,.94) 88%, #f4f0e8 100%);"></div>
 
@@ -993,13 +998,13 @@ class Component extends DCLogic {
     const wash = document.querySelector('[data-hero-wash]');
     if (!img) return;
     if (v === 'editorial') {
-      img.style.backgroundImage = "url('assets/hero-nuevo.png')";
+      img.style.backgroundImage = "url('assets/Portada.jpeg')";
       img.style.backgroundPosition = 'center 55%';
       if (content) content.style.justifyContent = 'flex-start';
       if (inner) { inner.style.textAlign = 'left'; inner.style.paddingLeft = '8vw'; }
       if (wash) wash.style.background = 'linear-gradient(110deg, rgba(20,18,12,.5) 0%, rgba(20,18,12,.2) 45%, rgba(244,240,232,.3) 80%, #f4f0e8 100%)';
     } else {
-      img.style.backgroundImage = "url('assets/hero-nuevo.png')";
+      img.style.backgroundImage = "url('assets/Portada.jpeg')";
       img.style.backgroundPosition = 'center 42%';
       if (content) content.style.justifyContent = 'center';
       if (inner) { inner.style.textAlign = 'center'; inner.style.paddingLeft = '0'; }
