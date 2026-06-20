@@ -86,11 +86,11 @@ body{background:#f4f0e8;color:#2b2118;font-family:'Cormorant Garamond',Georgia,s
   [data-scroll-hub=""] [style*="font-size:26px"] { font-size: 18px !important; }
   [data-scroll-hub=""] [style*="font-size:12px; letter-spacing:3.5px"] { font-size: 9px !important; letter-spacing: 2px !important; }
 
-  /* Satellite pills — reposition & compact */
-  [data-scroll-sat="top"]    { top: 22% !important; left: 50% !important; }
-  [data-scroll-sat="bottom"] { top: 78% !important; left: 50% !important; }
-  [data-scroll-sat="right"]  { top: 42% !important; left: 56% !important; }
-  [data-scroll-sat="left"]   { top: 58% !important; left: 4% !important; }
+  /* Satellite pills — closer to hub on mobile */
+  [data-scroll-sat="top"]    { top: 33% !important; left: 50% !important; }
+  [data-scroll-sat="bottom"] { top: 67% !important; left: 50% !important; }
+  [data-scroll-sat="right"]  { top: 46% !important; left: 60% !important; }
+  [data-scroll-sat="left"]   { top: 54% !important; left: 6% !important; }
 
   [data-scroll-sat] > div { padding: 8px 13px !important; gap: 6px !important; }
   [data-scroll-sat] span[style*="letter-spacing"] { font-size: 9px !important; letter-spacing: 0.8px !important; }
@@ -101,11 +101,31 @@ body{background:#f4f0e8;color:#2b2118;font-family:'Cormorant Garamond',Georgia,s
   /* ── MENU ── */
   #menu { padding: 64px 20px 72px !important; }
   #menu [style*="clamp(180px,30vw,420px)"] { display: none !important; }
-  /* dish cards — 2 per row on mobile */
-  #menu [style*="justify-content:center;flex-wrap:wrap"] { gap: 16px !important; }
-  #menu [style*="width:clamp(200px,22vw,260px)"] { width: calc(50vw - 30px) !important; min-width: 140px !important; }
-  #menu [style*="height:220px"] { height: 160px !important; }
-  /* pdf season note */
+
+  /* dish cards → horizontal swipe carousel */
+  #menu-dish-grid {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-snap-type: x mandatory !important;
+    justify-content: flex-start !important;
+    gap: 16px !important;
+    padding: 28px 20px 24px !important;
+    margin-left: -20px !important;
+    margin-right: -20px !important;
+    scrollbar-width: none !important;
+  }
+  #menu-dish-grid::-webkit-scrollbar { display: none !important; }
+  #menu-dish-grid > div {
+    flex: none !important;
+    width: 68vw !important;
+    min-width: 200px !important;
+    max-width: 260px !important;
+    scroll-snap-align: start !important;
+  }
+  #menu-dish-grid [style*="height:220px"] { height: 190px !important; }
+
+  /* pdf note */
   #menu [style*="margin-top:40px"] { margin-top: 28px !important; }
   #menu a[id="menu-pdf-link"] { padding: 14px 28px !important; font-size: 11px !important; }
 
@@ -159,13 +179,14 @@ body{background:#f4f0e8;color:#2b2118;font-family:'Cormorant Garamond',Georgia,s
   [data-scroll-hub=""] [style*="font-size:18px"] { font-size: 16px !important; }
 
   /* Satellite pills — hide right one on tiny screens to avoid overlap */
-  [data-scroll-sat="right"] { left: 52% !important; }
-  [data-scroll-sat="left"]  { left: 2% !important; }
+  [data-scroll-sat="top"]    { top: 35% !important; }
+  [data-scroll-sat="bottom"] { top: 65% !important; }
+  [data-scroll-sat="right"]  { top: 47% !important; left: 61% !important; }
+  [data-scroll-sat="left"]   { top: 53% !important; left: 4% !important; }
   [data-scroll-sat] > div { padding: 7px 11px !important; }
 
-  /* Menu dish cards — full width on very small */
-  #menu [style*="width:clamp(200px,22vw,260px)"] { width: calc(50vw - 26px) !important; }
-  #menu [style*="height:160px"] { height: 140px !important; }
+  /* Menu carousel — slightly narrower cards on very small phones */
+  #menu-dish-grid > div { width: 75vw !important; }
 
   /* Reviews card narrow */
   [data-screen-label="Reviews"] [style*="width:260px"] { width: 220px !important; }
@@ -529,7 +550,7 @@ We believe that great food tastes best when paired with an extraordinary environ
       <p data-i18n="menu_sub" style="font-size:16px; line-height:1.9; color:#5c564a; font-weight:300; max-width:520px; margin:0 auto 48px;">Artisan pizzas, fresh pasta, grilled meats and catch of the day. A selection that changes with the seasons and local fishing.</p>
 
       <!-- dish photo grid -->
-      <div style="display:flex; gap:24px; padding:48px 0 12px; justify-content:center; flex-wrap:wrap;">
+      <div id="menu-dish-grid" style="display:flex; gap:24px; padding:48px 0 12px; justify-content:center; flex-wrap:wrap;">
           <div style="flex:none; width:clamp(200px,22vw,260px); background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 14px 40px rgba(80,70,50,.10); transition:transform .4s cubic-bezier(.16,1,.3,1), box-shadow .4s ease;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 22px 52px rgba(80,70,50,.18)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 14px 40px rgba(80,70,50,.10)'">
             <div style="height:220px; overflow:hidden;">
               <img src="assets/dish-pizza.jpg" alt="Pizza Diavola" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s ease;" onmouseover="this.style.transform='scale(1.07)'" onmouseout="this.style.transform='scale(1)'">
