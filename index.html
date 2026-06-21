@@ -305,7 +305,7 @@ body{background:#f4f0e8;color:#2b2118;font-family:'Cormorant Garamond',Georgia,s
   <!-- HERO -->
   <section id="top" data-screen-label="Hero" data-hero="" style="position:relative; height:100vh; min-height:700px; overflow:hidden; display:flex; align-items:center; justify-content:center; background:#e9e3d7; cursor:default;">
     <div data-hero-bg="" style="position:absolute; inset:0; will-change:transform;">
-      <div data-hero-img="" style="position:absolute; inset:-7%; background-image:url('assets/Portada.jpeg'); background-size:cover; background-position:center 42%; animation:kenburns 30s ease-in-out infinite alternate;"></div>
+      <div data-hero-img="" style="position:absolute; inset:-7%; background-image:url('assets/Nueva portada.png'); background-size:cover; background-position:center 42%; animation:kenburns 30s ease-in-out infinite alternate;"></div>
     </div>
     <div data-hero-wash="" style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(247,243,236,.34) 0%, rgba(247,243,236,.12) 28%, rgba(244,240,232,.55) 68%, rgba(244,240,232,.94) 88%, #f4f0e8 100%);"></div>
 
@@ -1023,13 +1023,13 @@ class Component extends DCLogic {
     const wash = document.querySelector('[data-hero-wash]');
     if (!img) return;
     if (v === 'editorial') {
-      img.style.backgroundImage = "url('assets/Portada.jpeg')";
+      img.style.backgroundImage = "url('assets/Nueva portada.png')";
       img.style.backgroundPosition = 'center 55%';
       if (content) content.style.justifyContent = 'flex-start';
       if (inner) { inner.style.textAlign = 'left'; inner.style.paddingLeft = '8vw'; }
       if (wash) wash.style.background = 'linear-gradient(110deg, rgba(20,18,12,.5) 0%, rgba(20,18,12,.2) 45%, rgba(244,240,232,.3) 80%, #f4f0e8 100%)';
     } else {
-      img.style.backgroundImage = "url('assets/Portada.jpeg')";
+      img.style.backgroundImage = "url('assets/Nueva portada.png')";
       img.style.backgroundPosition = 'center 42%';
       if (content) content.style.justifyContent = 'center';
       if (inner) { inner.style.textAlign = 'center'; inner.style.paddingLeft = '0'; }
