@@ -248,7 +248,7 @@ body{background:#f4f0e8;color:#2b2118;font-family:'Cormorant Garamond',Georgia,s
         <a href="#top" data-i18n="nav_home" style="cursor:pointer; color:inherit; text-decoration:none;">Home</a>
         <a href="#about" data-i18n="nav_about" style="cursor:pointer; color:inherit; text-decoration:none;">About</a>
         <a href="#menu" data-i18n="nav_menu" style="cursor:pointer; color:inherit; text-decoration:none;">Menu</a>
-        <a href="#experience" data-i18n="nav_cocktails" style="cursor:pointer; color:inherit; text-decoration:none;">Experience</a>
+        <a href="#" id="nav-gallery-btn" data-i18n="nav_gallery" onclick="event.preventDefault(); window.openGallery();" style="cursor:pointer; color:inherit; text-decoration:none;">Gallery</a>
         <a href="#reserve" data-i18n="nav_reserve" style="cursor:pointer; color:inherit; text-decoration:none;">Reserve</a>
         <a id="nav-ai-btn" href="#" style="cursor:pointer; color:inherit; text-decoration:none; display:flex; align-items:center; gap:6px;" onclick="event.preventDefault(); window.openAIPanel();">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
@@ -292,7 +292,7 @@ body{background:#f4f0e8;color:#2b2118;font-family:'Cormorant Garamond',Georgia,s
     <a href="#top" onclick="document.getElementById('mobile-nav').classList.remove('is-open')" style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:300;letter-spacing:4px;color:#f4f0e8;text-decoration:none;text-transform:uppercase;" data-i18n="nav_home">Home</a>
     <a href="#about" onclick="document.getElementById('mobile-nav').classList.remove('is-open')" style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:300;letter-spacing:4px;color:#f4f0e8;text-decoration:none;text-transform:uppercase;" data-i18n="nav_about">About</a>
     <a href="#menu" onclick="document.getElementById('mobile-nav').classList.remove('is-open')" style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:300;letter-spacing:4px;color:#f4f0e8;text-decoration:none;text-transform:uppercase;" data-i18n="nav_menu">Menu</a>
-    <a href="#experience" onclick="document.getElementById('mobile-nav').classList.remove('is-open')" style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:300;letter-spacing:4px;color:#f4f0e8;text-decoration:none;text-transform:uppercase;" data-i18n="nav_cocktails">Experience</a>
+    <a href="#" onclick="event.preventDefault(); document.getElementById('mobile-nav').classList.remove('is-open'); window.openGallery();" style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:300;letter-spacing:4px;color:#f4f0e8;text-decoration:none;text-transform:uppercase;" data-i18n="nav_gallery">Gallery</a>
     <a href="#reserve" onclick="document.getElementById('mobile-nav').classList.remove('is-open')" style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:300;letter-spacing:4px;color:#f4f0e8;text-decoration:none;text-transform:uppercase;" data-i18n="nav_reserve">Reserve</a>
     <div style="display:flex;gap:16px;margin-top:8px;">
       <a href="tel:+34928339337" style="display:inline-flex;align-items:center;gap:10px;padding:14px 32px;background:linear-gradient(135deg,#d8c08a,#b8975a);border-radius:3px;color:#fff;text-decoration:none;font-size:13px;letter-spacing:2px;text-transform:uppercase;">
@@ -475,7 +475,7 @@ body{background:#f4f0e8;color:#2b2118;font-family:'Cormorant Garamond',Georgia,s
 We believe that great food tastes best when paired with an extraordinary environment. That is why we designed Bianco to be a feast for all senses—from the elegant white-and-gold aesthetics and luxury marble touchpoints to the fresh sea breeze that drifts through our open, green-filled space. Our team is dedicated to bringing you the true essence of Italy, sourcing the finest ingredients to create dishes that comfort the soul and delight the palate. From our kitchen to your table, every detail is handled with love. Come for the view, stay for the flavors, and become part of the Bianco family.</p>
         <p data-i18n="about_p2" style="font-size:16px; line-height:1.9; color:#5c564a; font-weight:300; text-align:justify;">From sunlit breakfasts to midnight cocktails, we treat hospitality as an art.</p>
       </div>
-      <div data-reveal="" style="opacity:0; transform:translateY(40px); transition:opacity 1.1s cubic-bezier(.16,1,.3,1) .15s, transform 1.1s cubic-bezier(.16,1,.3,1) .15s;">
+      <div id="about-3d-card" data-reveal="" style="opacity:0; transform:translateY(40px); transition:opacity 1.1s cubic-bezier(.16,1,.3,1) .15s, transform 1.1s cubic-bezier(.16,1,.3,1) .15s;">
         <div style="position:relative; aspect-ratio:4/5; overflow:hidden; border-radius:3px; box-shadow:0 30px 60px rgba(80,70,50,.18);">
           <div data-parallax="0.12" style="position:absolute; inset:-12%; background-image:url('assets/interior-lounge.jpg'); background-size:cover; background-position:center; will-change:transform;"></div>
         </div>
@@ -1166,7 +1166,7 @@ class Component extends DCLogic {
   translations() {
     return {
       es: {
-        nav_home: 'Inicio', nav_about: 'Nosotros', nav_menu: 'Carta', nav_cocktails: 'Experiencia', nav_reserve: 'Reservas', nav_assistant: 'Asistente', nav_follow: 'S\u00edguenos',
+        nav_home: 'Inicio', nav_about: 'Nosotros', nav_menu: 'Carta', nav_cocktails: 'Experiencia', nav_gallery: 'Galería', nav_reserve: 'Reservas', nav_assistant: 'Asistente', nav_follow: 'S\u00edguenos',
         exp_kicker: 'La experiencia Bianco', exp_title: 'Donde todo<br>cobra sentido', exp_sub: 'Desliza para ver c\u00f3mo se compone una velada en Bianco: fresco, a mano y con el mar de fondo.', exp_s1t: 'Fresco de la isla', exp_s1d: 'Fruta madurada al sol, pescado del d\u00eda y producto italiano aut\u00e9ntico, elegidos cada ma\u00f1ana.', exp_s2t: 'Hecho a mano', exp_s2d: 'Cada plato y cada copa se elabora al momento, con paciencia y un punto de teatro italiano.', exp_s3t: 'Servido con el atardecer', exp_s3d: 'Las mesas se ti\u00f1en de oro mientras la luz del Atl\u00e1ntico inunda la Avenida de las Playas.', exp_s4t: 'Una velada para recordar', exp_s4d: 'Blanco, dorado y el sonido del mar: el inconfundible sello Bianco.',
         hero_loc: 'Primera l\u00ednea de playa \u00b7 Puerto del Carmen, Lanzarote', hero_sub: 'Ristorante & Lounge', hero_scroll: 'Descubre',
         about_kicker: 'Nuestra esencia', about_title: 'Cocina italiana,<br><em style="font-style:italic; color:#b8975a;">frente al Atl\u00e1ntico</em>',
@@ -1239,7 +1239,7 @@ class Component extends DCLogic {
         ai_online_status: 'Concierge IA · Toujours disponible',
         ai_chip_q1: 'Quels sont les horaires ?', ai_chip_q2: 'Je voudrais réserver une table', ai_chip_q3: 'Quels plats conseillez-vous ?', ai_chip_q4: 'Avez-vous des plats véganes ?'},
       de: {
-        nav_home: 'Start', nav_about: '\u00dcber uns', nav_menu: 'Karte', nav_cocktails: 'Erlebnis', nav_reserve: 'Reservieren', nav_assistant: 'Assistent', nav_follow: 'Folgen Sie uns',
+        nav_home: 'Start', nav_about: '\u00dcber uns', nav_menu: 'Karte', nav_cocktails: 'Erlebnis', nav_gallery: 'Galerie', nav_reserve: 'Reservieren', nav_assistant: 'Assistent', nav_follow: 'Folgen Sie uns',
         exp_kicker: 'Das Bianco-Erlebnis', exp_title: 'Wo alles<br>zusammenkommt', exp_sub: 'Scrolle und sieh, wie ein Abend im Bianco entsteht \u2014 frisch, von Hand, mit Blick aufs Meer.', exp_s1t: 'Frisch von der Insel', exp_s1d: 'Sonnengereifte Fr\u00fcchte, der Fang des Tages und echte italienische Produkte \u2014 jeden Morgen ausgew\u00e4hlt.', exp_s2t: 'Von Hand gemacht', exp_s2d: 'Jeder Teller und jedes Glas wird frisch zubereitet \u2014 mit Geduld und etwas italienischem Theater.', exp_s3t: 'Serviert mit dem Sonnenuntergang', exp_s3d: 'Die Tische schimmern golden, w\u00e4hrend das Atlantiklicht \u00fcber die Avenida de las Playas flutet.', exp_s4t: 'Ein Abend, den man nicht vergisst', exp_s4d: 'Wei\u00df, Gold und das Rauschen des Meeres \u2014 die unverkennbare Bianco-Signatur.',
         hero_loc: 'Direkt am Strand \u00b7 Puerto del Carmen, Lanzarote', hero_sub: 'Ristorante & Lounge', hero_scroll: 'Entdecken',
         about_kicker: 'Unsere Essenz', about_title: 'Italienische K\u00fcche,<br><em style="font-style:italic; color:#b8975a;">mit Blick auf den Atlantik</em>',
@@ -1439,5 +1439,170 @@ class Component extends DCLogic {
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
   })();
   </script>
+
+<script>
+(function(){
+  var card = document.getElementById('about-3d-card');
+  if(!card) return;
+
+  // Wrap in a perspective container
+  card.style.transformStyle = 'preserve-3d';
+  card.style.transition = 'transform .6s cubic-bezier(.16,1,.3,1)';
+  card.style.willChange = 'transform';
+  card.parentElement.style.perspective = '1000px';
+
+  // Give inner photo and stats extra translateZ for depth
+  var photo = card.querySelector('[style*="aspect-ratio:4/5"]');
+  var stats = card.querySelector('[style*="display:flex; gap:18px"]');
+  if(photo) { photo.style.transform = 'translateZ(40px)'; photo.style.transition = 'transform .6s cubic-bezier(.16,1,.3,1)'; }
+  if(stats) { stats.style.transform = 'translateZ(20px)'; stats.style.transition = 'transform .6s cubic-bezier(.16,1,.3,1)'; }
+
+  var MAX_ROT = 12; // degrees
+
+  function onMove(e) {
+    var rect = card.getBoundingClientRect();
+    var cx = rect.left + rect.width / 2;
+    var cy = rect.top  + rect.height / 2;
+    var dx = (e.clientX - cx) / (rect.width  / 2);
+    var dy = (e.clientY - cy) / (rect.height / 2);
+    var rotY =  dx * MAX_ROT;
+    var rotX = -dy * MAX_ROT;
+    card.style.transition = 'transform .1s ease';
+    card.style.transform = 'rotateX('+rotX+'deg) rotateY('+rotY+'deg) scale(1.03)';
+  }
+
+  function onLeave() {
+    card.style.transition = 'transform .6s cubic-bezier(.16,1,.3,1)';
+    card.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
+  }
+
+  card.addEventListener('mousemove', onMove);
+  card.addEventListener('mouseleave', onLeave);
+})();
+</script>
+
+<!-- ══ GALLERY OVERLAY ══ -->
+<div id="gallery-overlay" style="display:none; position:fixed; inset:0; z-index:500; background:#f5f0e8; overflow:hidden;">
+  <!-- Close button -->
+  <button onclick="window.closeGallery()" style="position:absolute; top:24px; right:28px; z-index:10; background:none; border:none; cursor:pointer; color:#2c281f; font-size:32px; line-height:1; font-family:'Cormorant Garamond',serif;">&times;</button>
+  <!-- Title -->
+  <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center; pointer-events:none; z-index:1; user-select:none;">
+    <div style="font-family:'Cormorant Garamond',serif; font-size:clamp(32px,6vw,80px); font-weight:300; color:rgba(44,40,31,.08); letter-spacing:12px; text-transform:uppercase; white-space:nowrap;">Bianco</div>
+  </div>
+  <!-- Draggable cards container -->
+  <div id="gallery-cards" style="position:absolute; inset:0;"></div>
+</div>
+
+<script>
+(function(){
+  var cards = [
+    { img: 'assets/interior-lounge.jpg',      rot: -5,  x: '8%',   y: '12%'  },
+    { img: 'assets/terrace-sea.jpg',           rot: 6,   x: '28%',  y: '5%'   },
+    { img: 'assets/interior-bar.jpg',          rot: -8,  x: '50%',  y: '10%'  },
+    { img: 'assets/interior-wide.jpg',         rot: 4,   x: '68%',  y: '6%'   },
+    { img: 'assets/terrace-day.jpg',           rot: -3,  x: '14%',  y: '48%'  },
+    { img: 'assets/interior-booth.jpg',        rot: 7,   x: '38%',  y: '50%'  },
+    { img: 'assets/interior-night.jpg',        rot: -6,  x: '60%',  y: '45%'  },
+    { img: 'assets/beach-sunset.jpg',          rot: 3,   x: '78%',  y: '52%'  },
+    { img: 'assets/Nueva portada.png',         rot: -4,  x: '2%',   y: '60%'  },
+    { img: 'assets/sunset.png',                rot: 8,   x: '20%',  y: '65%'  },
+    { img: 'assets/night-dining.png',          rot: -7,  x: '42%',  y: '62%'  },
+    { img: 'assets/terrace-sea.png',           rot: 5,   x: '62%',  y: '60%'  },
+    { img: 'assets/beach.png',                 rot: -2,  x: '80%',  y: '30%'  },
+    { img: 'assets/dish-pizza.jpg',            rot: 9,   x: '84%',  y: '58%'  },
+    { img: 'assets/dish-salmon.jpg',           rot: -5,  x: '3%',   y: '28%'  },
+    { img: 'assets/interior-gold.png',         rot: 6,   x: '72%',  y: '22%'  },
+  ];
+
+  var overlay = document.getElementById('gallery-overlay');
+  var container = document.getElementById('gallery-cards');
+  var built = false;
+
+  function buildCards() {
+    if(built) return;
+    built = true;
+    cards.forEach(function(c, i) {
+      var card = document.createElement('div');
+      card.style.cssText = 'position:absolute; width:220px; cursor:grab; user-select:none; border-radius:4px; box-shadow:0 20px 50px rgba(30,20,8,.22); background:#fff; overflow:hidden; transition:box-shadow .2s; z-index:' + (i+2) + ';';
+      card.style.left = c.x;
+      card.style.top  = c.y;
+      card.style.transform = 'rotate('+c.rot+'deg)';
+
+      var img = document.createElement('img');
+      img.src = c.img;
+      img.style.cssText = 'width:100%; height:170px; object-fit:cover; display:block; pointer-events:none;';
+      card.appendChild(img);
+      container.appendChild(card);
+
+      // drag logic
+      var startX, startY, startL, startT, dragging = false;
+
+      function getPos(e) {
+        return e.touches ? { x: e.touches[0].clientX, y: e.touches[0].clientY }
+                         : { x: e.clientX, y: e.clientY };
+      }
+
+      function onStart(e) {
+        e.preventDefault();
+        dragging = true;
+        var p = getPos(e);
+        startX = p.x; startY = p.y;
+        startL = card.offsetLeft; startT = card.offsetTop;
+        card.style.cursor = 'grabbing';
+        card.style.boxShadow = '0 32px 70px rgba(30,20,8,.35)';
+        card.style.zIndex = 100;
+        card.style.transition = 'none';
+      }
+
+      function onMove(e) {
+        if(!dragging) return;
+        e.preventDefault();
+        var p = getPos(e);
+        card.style.left = (startL + p.x - startX) + 'px';
+        card.style.top  = (startT + p.y - startY) + 'px';
+      }
+
+      function onEnd() {
+        if(!dragging) return;
+        dragging = false;
+        card.style.cursor = 'grab';
+        card.style.boxShadow = '0 20px 50px rgba(30,20,8,.22)';
+        card.style.zIndex = i + 2;
+        card.style.transition = 'box-shadow .2s';
+      }
+
+      card.addEventListener('mousedown',  onStart);
+      card.addEventListener('touchstart', onStart, { passive: false });
+      document.addEventListener('mousemove',  onMove);
+      document.addEventListener('touchmove',  onMove, { passive: false });
+      document.addEventListener('mouseup',    onEnd);
+      document.addEventListener('touchend',   onEnd);
+    });
+  }
+
+  window.openGallery = function() {
+    buildCards();
+    overlay.style.display = 'block';
+    requestAnimationFrame(function(){
+      overlay.style.opacity = '0';
+      overlay.style.transition = 'opacity .35s ease';
+      requestAnimationFrame(function(){
+        overlay.style.opacity = '1';
+      });
+    });
+  };
+
+  window.closeGallery = function() {
+    overlay.style.transition = 'opacity .3s ease';
+    overlay.style.opacity = '0';
+    setTimeout(function(){ overlay.style.display = 'none'; }, 300);
+  };
+
+  // Close on Escape
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') window.closeGallery();
+  });
+})();
+</script>
 </body>
 </html>
