@@ -61,17 +61,29 @@ body{background:#f4f0e8;color:#2b2118;font-family:'Cormorant Garamond',Georgia,s
   [data-conveyor=""] [style*="font-size:18px"] { font-size: 14px !important; }
 
   /* ── ABOUT ── */
-  #about { padding: 60px 24px 80px !important; }
+  #about { padding: 52px 20px 70px !important; }
   /* collapse 2-col grid to 1-col */
   #about [style*="grid-template-columns:1fr 1fr"] {
-    display: flex !important; flex-direction: column !important; gap: 36px !important;
+    display: flex !important; flex-direction: column !important; gap: 32px !important;
   }
-  /* reduce aspect ratio on the image */
-  #about [style*="aspect-ratio:4/5"] { aspect-ratio: 4/3 !important; }
+  /* heading size */
+  #about h2 { font-size: clamp(28px,7vw,40px) !important; margin-bottom: 18px !important; }
+  /* paragraph text smaller and not justified */
+  #about p { font-size: 14px !important; line-height: 1.75 !important; text-align: left !important; }
+  /* image: reduce height, keep proportions */
+  #about [style*="aspect-ratio:4/5"] { aspect-ratio: 16/9 !important; border-radius: 6px !important; }
   /* hide the giant decorative B letter */
   #about [style*="clamp(180px,30vw,420px)"] { display: none !important; }
-  /* stat boxes — smaller on mobile */
-  #about [style*="font-size:34px"] { font-size: 24px !important; }
+  /* stats row: stack on very small screens */
+  #about [style*="display:flex; gap:18px"] { gap: 8px !important; }
+  /* stat number smaller */
+  #about [style*="font-size:34px"] { font-size: 20px !important; }
+  /* stat label smaller */
+  #about [style*="font-size:11px; letter-spacing:2px"] { font-size: 9px !important; letter-spacing: 1px !important; }
+  /* stat box padding */
+  #about [style*="padding:18px 8px"] { padding: 12px 4px !important; }
+  /* disable 3D tilt on mobile */
+  #about-3d-card { transform-style: flat !important; }
 
   /* ── EXPERIENCE (canvas + hub + satellites) ── */
   /* Hub central pill — más pequeño en móvil */
