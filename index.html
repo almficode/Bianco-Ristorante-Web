@@ -526,7 +526,7 @@ We believe that great food tastes best when paired with an extraordinary environ
   <!-- EXPERIENCE — scroll-driven immersive story -->
   <section id="experience" data-screen-label="Experience" data-cocktail-wrap="" style="position:relative; height:300vh; background:#f4f0e8;">
     <div style="position:sticky; top:0; height:100vh; overflow:hidden;">
-      <canvas data-cocktail-canvas="" style="position:absolute; inset:0; width:100%; height:100%; display:block;"></canvas>
+      <video data-cocktail-video="" src="assets/12.mp4" muted playsinline preload="auto" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;"></video>
       <div style="position:absolute; top:0; left:0; right:0; height:22vh; background:linear-gradient(#f4f0e8,rgba(244,240,232,0)); pointer-events:none; z-index:2;"></div>
       <div style="position:absolute; bottom:0; left:0; right:0; height:22vh; background:linear-gradient(rgba(244,240,232,0),#f4f0e8); pointer-events:none; z-index:2;"></div>
       <div style="position:absolute; top:0; left:0; bottom:0; width:7vw; background:linear-gradient(90deg,rgba(244,240,232,.55),transparent); pointer-events:none; z-index:2;"></div>
@@ -817,10 +817,6 @@ We believe that great food tastes best when paired with an extraordinary environ
 class Component extends DCLogic {
   componentDidMount() {
     const root = document;
-    this.FRAME_COUNT = 90;
-    this._frames = new Array(this.FRAME_COUNT).fill(null);
-    this._curFrame = -1;
-    this._framesReady = false;
     this._capState = 0;
     this._history = [];
     this._busy = false;
@@ -905,21 +901,13 @@ class Component extends DCLogic {
       });
     }
 
-    // ---- cocktail canvas ----
+    // ---- cocktail video ----
     this._cocktailWrap = root.querySelector('[data-cocktail-wrap]');
-    this._cv = root.querySelector('[data-cocktail-canvas]');
-    if (this._cv) this._cvctx = this._cv.getContext('2d');
+    this._video = root.querySelector('[data-cocktail-video]');
     this._steps = Array.from(root.querySelectorAll('[data-step]'));
     this._dots = Array.from(root.querySelectorAll('[data-dot]'));
     this._expCue = root.querySelector('[data-exp-cue]');
     this._stepState = 0;
-    if (this._cocktailWrap) {
-      const cio = new IntersectionObserver((entries) => {
-        entries.forEach((e) => { if (e.isIntersecting) { this.loadFrames(); cio.disconnect(); } });
-      }, { rootMargin: '600px 0px' });
-      cio.observe(this._cocktailWrap);
-      this._cio = cio;
-    }
 
     // ---- parallax + nav + hero + cocktail (single rAF scroll) ----
     const parallaxEls = Array.from(root.querySelectorAll('[data-parallax]'));
@@ -955,15 +943,14 @@ class Component extends DCLogic {
       if (navLinks) navLinks.style.color = col;
       if (navLang) navLang.style.color = col;
       if (navSocial) navSocial.style.color = col;
-      // cocktail frames
+      // cocktail video
       if (this._cocktailWrap) {
         const r = this._cocktailWrap.getBoundingClientRect();
         const total = this._cocktailWrap.offsetHeight - vh;
         const scrolled = Math.min(Math.max(-r.top, 0), total);
         const p = total > 0 ? scrolled / total : 0;
-        if (this._framesReady) {
-          const idx = Math.round(p * (this.FRAME_COUNT - 1));
-          if (idx !== this._curFrame) { this._curFrame = idx; this.drawCocktailFrame(this.nearestLoaded(idx)); }
+        if (this._video && this._video.duration) {
+          this._video.currentTime = p * this._video.duration;
         }
         const step = Math.max(0, Math.min(3, Math.floor(p * 4)));
         if (step !== this._stepState) {
@@ -999,7 +986,7 @@ class Component extends DCLogic {
     };
     const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(render); } };
     window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', () => { this.drawCocktailFrame(this.nearestLoaded(this._curFrame < 0 ? 0 : this._curFrame)); onScroll(); }, { passive: true });
+    window.addEventListener('resize', () => { onScroll(); }, { passive: true });
     render();
     this._onScroll = onScroll;
 
@@ -1078,54 +1065,6 @@ class Component extends DCLogic {
     try { localStorage.setItem('bianco_lang', lang); document.documentElement.lang = lang; } catch (e) {}
   }
 
-  loadFrames() {
-    if (this._loading) return; this._loading = true;
-    const base = 'assets/vframes/v';
-    const load = (i) => new Promise((res) => {
-      const im = new Image();
-      im.onload = () => { this._frames[i] = im; if (!this._framesReady) { this._framesReady = true; this.drawCocktailFrame(i); } res(); };
-      im.onerror = () => res();
-      im.src = base + String(i).padStart(3, '0') + '.jpg';
-    });
-    const eager = [];
-    for (let i = 0; i < 12; i++) eager.push(i);
-    (async () => {
-      for (const i of eager) await load(i);
-      this.drawCocktailFrame(this.nearestLoaded(0));
-      // background: load the rest in small parallel batches
-      const rest = [];
-      for (let i = 12; i < this.FRAME_COUNT; i++) rest.push(i);
-      const batch = 6;
-      for (let i = 0; i < rest.length; i += batch) {
-        await Promise.all(rest.slice(i, i + batch).map(load));
-        this.drawCocktailFrame(this.nearestLoaded(this._curFrame < 0 ? 0 : this._curFrame));
-      }
-    })();
-  }
-
-  nearestLoaded(idx) {
-    if (idx == null || idx < 0) idx = 0;
-    if (this._frames[idx]) return idx;
-    for (let d = 1; d < this.FRAME_COUNT; d++) {
-      if (idx - d >= 0 && this._frames[idx - d]) return idx - d;
-      if (idx + d < this.FRAME_COUNT && this._frames[idx + d]) return idx + d;
-    }
-    return idx;
-  }
-
-  drawCocktailFrame(idx) {
-    const cv = this._cv, ctx = this._cvctx; if (!cv || !ctx) return;
-    const dpr = Math.min(2, window.devicePixelRatio || 1);
-    const cw = cv.clientWidth, ch = cv.clientHeight;
-    if (cv.width !== Math.round(cw * dpr) || cv.height !== Math.round(ch * dpr)) { cv.width = Math.round(cw * dpr); cv.height = Math.round(ch * dpr); }
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    ctx.fillStyle = '#f4f0e8'; ctx.fillRect(0, 0, cw, ch);
-    const img = this._frames[idx]; if (!img) return;
-    const iw = img.naturalWidth, ih = img.naturalHeight;
-    const scale = Math.min(cw / iw, ch / ih) * 0.94;
-    const dw = iw * scale, dh = ih * scale;
-    ctx.drawImage(img, (cw - dw) / 2, (ch - dh) / 2, dw, dh);
-  }
 
   async sendChat(text) {
     text = (text || '').trim(); if (!text || this._busy) return;
