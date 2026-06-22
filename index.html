@@ -480,7 +480,7 @@ body{background:#f4f0e8;color:#2b2118;font-family:'Cormorant Garamond',Georgia,s
   <section id="about" data-screen-label="About" style="position:relative; padding:90px 48px 140px; background:#f4f0e8; overflow:hidden;">
     <div style="position:absolute; top:-60px; right:-40px; font-family:'Cormorant Garamond',serif; font-size:clamp(180px,30vw,420px); color:#ece5d6; line-height:1; pointer-events:none; user-select:none; z-index:0;">B</div>
     <div id="about-grid" style="position:relative; max-width:1080px; margin:0 auto; display:flex; flex-wrap:wrap; gap:80px; align-items:center; z-index:2;">
-      <div data-reveal="" style="flex:1; min-width:280px; opacity:0; transform:translateY(40px); transition:opacity 1.1s cubic-bezier(.16,1,.3,1), transform 1.1s cubic-bezier(.16,1,.3,1);">
+      <div id="about-text" data-reveal="" style="flex:1; min-width:280px; opacity:0; transform:translateY(40px); transition:opacity 1.1s cubic-bezier(.16,1,.3,1), transform 1.1s cubic-bezier(.16,1,.3,1);">
         <div data-i18n="about_kicker" style="font-size:12px; letter-spacing:4px; text-transform:uppercase; color:#b8975a; margin-bottom:22px;">Our essence</div>
         <h2 data-i18n-html="about_title" style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:clamp(36px,4.5vw,56px); line-height:1.08; margin-bottom:26px;">Italian cuisine,<br><em style="font-style:italic; color:#b8975a;">facing the Atlantic</em></h2>
         <p data-i18n="about_p1" style="font-size:16px; line-height:1.9; color:#5c564a; font-weight:300; margin-bottom:20px; text-align:justify;"> Born from a passion for authentic Italian hospitality, Bianco was created to be a bright, welcoming haven on the bustling coastline of Puerto del Carmen. Situated right on the seafront of Avenida de las Playas, our lounge restaurant combines the warmth of Italian culture with the volcanic soul and radiant light of Lanzarote.
@@ -1614,6 +1614,47 @@ class Component extends DCLogic {
   document.addEventListener('keydown', function(e){
     if(e.key === 'Escape') window.closeGallery();
   });
+})();
+</script>
+
+<script>
+(function(){
+  function layoutAbout() {
+    var grid = document.getElementById('about-grid');
+    var text = document.getElementById('about-text');
+    var card = document.getElementById('about-3d-card');
+    if (!grid || !text || !card) return;
+
+    if (window.innerWidth <= 768) {
+      grid.style.display        = 'flex';
+      grid.style.flexDirection  = 'column';
+      grid.style.flexWrap       = 'nowrap';
+      grid.style.gap            = '28px';
+      grid.style.padding        = '0';
+      text.style.width          = '100%';
+      text.style.minWidth       = '0';
+      text.style.order          = '1';
+      text.style.textAlign      = 'center';
+      card.style.width          = '100%';
+      card.style.minWidth       = '0';
+      card.style.order          = '2';
+    } else {
+      grid.style.display        = 'flex';
+      grid.style.flexDirection  = 'row';
+      grid.style.flexWrap       = 'wrap';
+      grid.style.gap            = '80px';
+      text.style.width          = '';
+      text.style.minWidth       = '280px';
+      text.style.order          = '';
+      text.style.textAlign      = '';
+      card.style.width          = '';
+      card.style.minWidth       = '280px';
+      card.style.order          = '';
+    }
+  }
+  document.addEventListener('DOMContentLoaded', layoutAbout);
+  window.addEventListener('resize', layoutAbout);
+  layoutAbout();
 })();
 </script>
 </body>
