@@ -1145,34 +1145,44 @@ class Component extends DCLogic {
 
 
   async sendChat(text) {
-    text = (text || '').trim(); if (!text || this._busy) return;
+    text = (text || '').trim();
+    if (!text || this._busy) return;
     this._busy = true;
-    const log = document.querySelector('[data-chat-log]');
+
+    const log   = document.querySelector('[data-chat-log]');
     const input = document.querySelector('[data-chat-input]');
     if (input) input.value = '';
+
     this.addBubble(log, 'user', text);
     const typing = this.addTyping(log);
+
+    // Build conversation: last 8 exchanges + new user message
+    const messages = this._history.slice(-8).concat([{ role: 'user', content: text }]);
+
     try {
-      const persona = "You are the digital concierge for Bianco Ristorante, a white-and-gold Italian restaurant and cocktail lounge on the beachfront of Avenida de las Playas 33 (CC Arena Dorada), Puerto del Carmen, Tias, Lanzarote. Open every day 10:00-00:00, serving breakfast, lunch, dinner and cocktails. Menu highlights: Pizza Diavola, Margherita, Quattro Formaggi, Salmone alla Griglia, Tagliata di Manzo, Calamares a la Romana, Penne Pomodoro, Spaghetti alle Vongole, Risotto al Tartufo, Bruschetta, Burrata, desserts (Tiramisu, Panna Cotta) and signature cocktails (Frozen Strawberry, Aperol Spritz, Negroni). Mains roughly 12-24 EUR. Vegan, vegetarian and gluten-free options available on request. Style: warm, elegant and concise (2-4 sentences). ALWAYS reply in the SAME language the guest writes in. For reservations, invite the guest to call the restaurant (the phone number is on our Instagram @bianco_lounge_lanzarote and Facebook). Mention the sea view and sunset when relevant. If unsure of a specific detail, suggest calling or visiting.";
-      const primed = [
-        { role: 'user', content: persona + "\n\nYou are now chatting with a guest on the website. Greet only if they greet you." },
-        { role: 'assistant', content: 'Understood. I am the Bianco concierge and will reply in the guest\u2019s language.' }
-      ].concat(this._history.slice(-8)).concat([{ role: 'user', content: text }]);
       const res = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages: primed }),
+        body: JSON.stringify({ messages }),
       });
-      if (!res.ok) throw new Error('api-error');
-      const data = await res.json();
-      const reply = (data.reply || '').trim();
-      if (typing && typing.remove) typing.remove();
-      this.addBubble(log, 'bot', (reply || '').trim() || this.fallbackMsg());
-      this._history.push({ role: 'user', content: text }, { role: 'assistant', content: reply });
+
+      let reply = '';
+      if (res.ok) {
+        const data = await res.json();
+        reply = (data.reply || '').trim();
+      }
+
+      if (typing && typing.parentNode) typing.remove();
+      this.addBubble(log, 'bot', reply || this.fallbackMsg());
+
+      if (reply) {
+        this._history.push({ role: 'user', content: text }, { role: 'assistant', content: reply });
+      }
     } catch (e) {
-      if (typing && typing.remove) typing.remove();
+      if (typing && typing.parentNode) typing.remove();
       this.addBubble(log, 'bot', this.fallbackMsg());
     }
+
     this._busy = false;
   }
 
