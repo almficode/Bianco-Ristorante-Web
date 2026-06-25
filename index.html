@@ -1158,12 +1158,14 @@ class Component extends DCLogic {
         { role: 'user', content: persona + "\n\nYou are now chatting with a guest on the website. Greet only if they greet you." },
         { role: 'assistant', content: 'Understood. I am the Bianco concierge and will reply in the guest\u2019s language.' }
       ].concat(this._history.slice(-8)).concat([{ role: 'user', content: text }]);
-      let reply = '';
-      if (window.claude && window.claude.complete) {
-        reply = await window.claude.complete({ messages: primed });
-      } else {
-        throw new Error('no-api');
-      }
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages: primed }),
+      });
+      if (!res.ok) throw new Error('api-error');
+      const data = await res.json();
+      const reply = (data.reply || '').trim();
       if (typing && typing.remove) typing.remove();
       this.addBubble(log, 'bot', (reply || '').trim() || this.fallbackMsg());
       this._history.push({ role: 'user', content: text }, { role: 'assistant', content: reply });
