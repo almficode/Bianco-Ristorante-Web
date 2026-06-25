@@ -1156,8 +1156,11 @@ class Component extends DCLogic {
     this.addBubble(log, 'user', text);
     const typing = this.addTyping(log);
 
-    // Build conversation: last 8 exchanges + new user message
-    const messages = this._history.slice(-8).concat([{ role: 'user', content: text }]);
+    // Historial de conversación (máx. 10 mensajes) + nuevo mensaje del usuario
+    const messages = [
+      ...this._history.slice(-10),
+      { role: 'user', content: text }
+    ];
 
     try {
       const res = await fetch('/api/chat', {
@@ -1166,18 +1169,21 @@ class Component extends DCLogic {
         body: JSON.stringify({ messages }),
       });
 
-      let reply = '';
-      if (res.ok) {
-        const data = await res.json();
-        reply = (data.reply || '').trim();
-      }
+      const data = await res.json();
+      const reply = (data.reply || '').trim();
 
       if (typing && typing.parentNode) typing.remove();
-      this.addBubble(log, 'bot', reply || this.fallbackMsg());
 
       if (reply) {
-        this._history.push({ role: 'user', content: text }, { role: 'assistant', content: reply });
+        this.addBubble(log, 'bot', reply);
+        this._history.push(
+          { role: 'user', content: text },
+          { role: 'assistant', content: reply }
+        );
+      } else {
+        this.addBubble(log, 'bot', this.fallbackMsg());
       }
+
     } catch (e) {
       if (typing && typing.parentNode) typing.remove();
       this.addBubble(log, 'bot', this.fallbackMsg());
