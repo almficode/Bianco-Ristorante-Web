@@ -117,6 +117,13 @@ body{background:#f4f0e8;color:#2b2118;font-family:'Cormorant Garamond',Georgia,s
   /* Title in experience section */
   #experience [style*="padding:30px"] { padding: 18px 16px 12px !important; }
 
+  /* ── EXPERIENCE VIDEO — mobile fix ── */
+  /* Reduce height so scroll doesn't take forever on mobile */
+  #experience[data-cocktail-wrap=""] { height: 200vh !important; }
+  /* Ensure video fills the sticky viewport */
+  #experience [style*="position:sticky"] { height: 100svh !important; }
+  [data-cocktail-video=""] { object-position: center center !important; }
+
   /* ── MENU ── */
   #menu { padding: 64px 20px 72px !important; }
   #menu [style*="clamp(180px,30vw,420px)"] { display: none !important; }
@@ -986,6 +993,37 @@ class Component extends DCLogic {
     this._dots = Array.from(root.querySelectorAll('[data-dot]'));
     this._expCue = root.querySelector('[data-exp-cue]');
     this._stepState = 0;
+    this._videoReady = false;
+
+    if (this._video) {
+      const vid = this._video;
+      // iOS Safari requires play()+pause() before currentTime scrubbing works
+      const unlock = () => {
+        this._videoReady = true;
+        const p = vid.play();
+        if (p && p.then) {
+          p.then(() => { vid.pause(); vid.currentTime = 0; }).catch(() => {});
+        } else {
+          vid.pause(); vid.currentTime = 0;
+        }
+      };
+      if (vid.readyState >= 2) {
+        unlock();
+      } else {
+        vid.addEventListener('canplay', unlock, { once: true });
+        vid.addEventListener('loadedmetadata', unlock, { once: true });
+      }
+      // Force load on mobile (browsers skip preload="auto" on mobile to save data)
+      vid.load();
+      // Also unlock on first user touch (iOS fallback)
+      const touchUnlock = () => {
+        if (!this._videoReady) unlock();
+        document.removeEventListener('touchstart', touchUnlock);
+        document.removeEventListener('click', touchUnlock);
+      };
+      document.addEventListener('touchstart', touchUnlock, { once: true, passive: true });
+      document.addEventListener('click', touchUnlock, { once: true });
+    }
 
     // ---- parallax + nav + hero + cocktail (single rAF scroll) ----
     const parallaxEls = Array.from(root.querySelectorAll('[data-parallax]'));
@@ -1027,7 +1065,7 @@ class Component extends DCLogic {
         const total = this._cocktailWrap.offsetHeight - vh;
         const scrolled = Math.min(Math.max(-r.top, 0), total);
         const p = total > 0 ? scrolled / total : 0;
-        if (this._video && this._video.duration) {
+        if (this._video && this._video.duration && this._videoReady) {
           this._video.currentTime = p * this._video.duration;
         }
         const step = Math.max(0, Math.min(3, Math.floor(p * 4)));
