@@ -172,7 +172,21 @@ body{background:#f4f0e8;color:#2b2118;font-family:'Cormorant Garamond',Georgia,s
   [data-screen-label="Reviews"] [style*="width:320px"] { width: 260px !important; min-height: unset !important; }
 
   /* ── RESERVE ── */
-  #reserve { padding: 64px 20px !important; }
+  #reserve { padding: 0 !important; }
+  #reserve > div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+    padding: 72px 24px 64px !important;
+  }
+  #reserve h2 { font-size: clamp(30px,8vw,44px) !important; margin-bottom:16px !important; }
+  #reserve p { margin-bottom:28px !important; }
+  /* Tarjeta de llamada más compacta en móvil */
+  #reserve a[data-reserve-call=""] { padding: 20px 20px !important; gap: 16px !important; }
+  #reserve a[data-reserve-call=""] > div:first-child { width:44px !important; height:44px !important; flex:none !important; }
+  #reserve a[data-reserve-call=""] [style*="font-size:28px"] { font-size: 22px !important; }
+  /* Tarjeta redes sociales */
+  #reserve [style*="padding:24px 32px"] { padding: 18px 20px !important; }
+  #reserve [style*="display:flex;gap:12px"] { flex-wrap: wrap !important; gap: 10px !important; }
 
   /* ── MAP ── */
   #map-section [style*="display:flex;flex-wrap:wrap"] { flex-direction: column !important; }
